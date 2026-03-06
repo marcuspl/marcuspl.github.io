@@ -1,0 +1,780 @@
+\documentclass[11pt,letterpaper]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue!60!black,
+  urlcolor=blue!60!black,
+  citecolor=blue!60!black,
+  pdftitle={Complete Reference --- Swiss Cheese Method},
+  pdfauthor={Marcus Persson Rydberg},
+}
+
+\usepackage{titlesec}
+\titleformat{\section}{\large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection}{1em}{}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.6em}
+
+% Compact description list style
+\newlist{reflist}{description}{1}
+\setlist[reflist]{style=nextline, leftmargin=1.5em, labelwidth=!, font=\itshape}
+
+\begin{document}
+
+% ---- Title Page ----
+\begin{titlepage}
+\centering
+\vspace*{3cm}
+{\LARGE\bfseries Complete Reference --- Swiss Cheese Method\par}
+\vspace{1cm}
+{\Large Critical Companion to the Swiss Cheese Method Paper\par}
+\vspace{2cm}
+{\large Marcus Persson Rydberg\par}
+\vspace{1cm}
+{\large March 2026\par}
+\vfill
+\end{titlepage}
+
+% ---- Front Matter ----
+\thispagestyle{empty}
+
+\textbf{Scope:} Consolidated from Wave 1--5 syntheses and Wave 1/Wave 4 editorial notes.
+
+\textbf{Purpose:} Critical companion to the paper. Exhaustive ledger of disagreements, criticisms, unresolved tensions, and open questions.
+
+\textbf{Structure:} Topic-based (not wave-based). Each item includes: Dispute, Positions, Status, Evidence.
+
+\tableofcontents
+\newpage
+
+% ====================================================================
+\section{A. Core Framing and Value Proposition}
+% ====================================================================
+
+\subsection{A1. ``Tactical safety net'' vs.\ ``force multiplier''}
+
+\begin{reflist}
+\item[Dispute:] Is the method primarily an error-catching safety net or a production-enabling force multiplier?
+\item[Positions:]~
+  \begin{itemize}[nosep]
+    \item Models (Waves 1--4): ``Tactical safety net, not strategic oracle.''
+    \item Editor (Wave 4 notes): ``Force multiplier --- enables work that otherwise wouldn't exist.''
+    \item Wave 5 synthesis: Both true; safety net is a mechanism, force multiplier is the outcome.
+  \end{itemize}
+\item[Status:] Resolved as dual-frame (both true).
+\item[Evidence:]~
+  \begin{itemize}[nosep]
+    \item Error catches (SSS correction, HIPAA retraction, ADT overclaim) demonstrate safety net.
+    \item Editor's counterfactuals (healthcare analysis + the-gap book would not exist) demonstrate force multiplier.
+  \end{itemize}
+\item[Note:] Where the models reference ``weeks'' as a timeframe, the actual figures are: the-gap manuscript was produced in two days; the enterprise healthcare analysis took a few hours. The-gap is published at churchianity.ai.
+\end{reflist}
+
+\subsection{A2. ``Strongest where you need it least''}
+
+\begin{reflist}
+\item[Dispute:] Does the method add most value in low-stakes factual fixes rather than high-stakes strategic framing?
+\item[Positions:]~
+  \begin{itemize}[nosep]
+    \item Wave 3 synthesis: Strongest on factual specifics, weakest on framing; ``strongest where you need it least.''
+    \item Editor (Wave 4 notes): This is backwards; small-fact catching is the point.
+    \item Wave 5 synthesis: Factual catches are high-impact; framing misses may be editor-endorsed.
+  \end{itemize}
+\item[Status:] Reframed, not discarded.
+\item[Evidence:] Factual catches prevented credibility-destroying errors; framing failures often aligned with editor intent.
+\end{reflist}
+
+\subsection{A3. Baseline mismatch: ``B+/A-'' vs ``Excellent''}
+
+\begin{reflist}
+\item[Dispute:] Are deliverables merely strong (B+/A-) or excellent?
+\item[Positions:]~
+  \begin{itemize}[nosep]
+    \item Models (Wave 4): B+ healthcare, A- the-gap (quality vs idealized specialist standard).
+    \item Editor (Wave 4 notes): Both are excellent (productivity-adjusted standard).
+    \item Wave 5 synthesis: Both can be right; axes differ.
+  \end{itemize}
+\item[Status:] Resolved as measurement-axis disagreement.
+\item[Evidence:]~
+  \begin{itemize}[nosep]
+    \item Documented liabilities (ADT overclaim, exfiltration math, translation gaps) support B+/A-.
+    \item Counterfactual speed/cost claims support ``excellent'' for availability-adjusted value.
+  \end{itemize}
+\end{reflist}
+
+\subsection{A4. Value category bias (small facts vs big picture)}
+
+\begin{reflist}
+\item[Dispute:] Are ``small facts'' a limitation or the point?
+\item[Positions:]~
+  \begin{itemize}[nosep]
+    \item Models (Waves 1--4): Limitation; weak on big-picture framing.
+    \item Editor (Wave 4 notes): Point; humans can handle macro gaps, models shine on micro.
+    \item Wave 5 synthesis: Complementary division of labor.
+  \end{itemize}
+\item[Status:] Reframed toward complementarity.
+\item[Evidence:]~
+  \begin{itemize}[nosep]
+    \item Models systematically miss corpus-level gaps; editor fills them.
+    \item Models reliably catch factual specifics humans might miss at scale.
+  \end{itemize}
+\end{reflist}
+
+% ====================================================================
+\section{B. Theoretical Framework and Metaphors}
+% ====================================================================
+
+\subsection{B1. Map-territory framework vs alternatives}
+
+\begin{reflist}
+\item[Dispute:] Is ``LLMs as maps of maps'' the right theoretical frame?
+\item[Positions:]~
+  \begin{itemize}[nosep]
+    \item Claude: Concerned it may be editor-seeded shared prior; proposed alternatives (improv, compressed DB, pipeline filter).
+    \item Gemini: Defends map-territory as most analytically useful.
+    \item GPT: Adds ``information-pipeline'' as complementary frame.
+  \end{itemize}
+\item[Status:] Map-territory adopted; alternatives preserved as tension.
+\item[Evidence:] Map-territory supports explicit reasoning about bias, scale, and publication filters; alternatives remain plausible but less operational.
+\end{reflist}
+
+\subsection{B2. RLHF analogy: boundary overlay vs terrain reshaping}
+
+\begin{reflist}
+\item[Dispute:] Is RLHF a boundary overlay or a reshaping of the map itself?
+\item[Positions:]~
+  \begin{itemize}[nosep]
+    \item Gemini: Boundary overlay metaphor.
+    \item Claude: Misleading; RLHF reshapes the map.
+    \item GPT: Retain as partial with caveats.
+  \end{itemize}
+\item[Status:] Resolved as partial analogy.
+\item[Evidence:] RLHF both restricts and changes output distribution; both effects observed.
+\end{reflist}
+
+\subsection{B3. Dual engine vs triple engine}
+
+\begin{reflist}
+\item[Dispute:] Does Reason + Surowiecki fully explain the method, or is a third track needed?
+\item[Positions:]~
+  \begin{itemize}[nosep]
+    \item Wave 2: Dual engine (error prevention + insight generation).
+    \item Wave 5: Add Amplification (parallel traversal/proximal exploration).
+  \end{itemize}
+\item[Status:] Updated to triple engine in Wave 5.
+\item[Evidence:] Force multiplier effect cannot be explained solely by error catching or insight collision.
+\end{reflist}
+
+% ====================================================================
+\section{C. Correlation, Convergence, and Independence}
+% ====================================================================
+
+\subsection{C1. Independence of model errors}
+
+\begin{reflist}
+\item[Dispute:] Are model errors independent enough for the Swiss Cheese analogy?
+\item[Positions:]~
+  \begin{itemize}[nosep]
+    \item Wave 3: ``Partially, asymmetrically, decreasingly.''
+    \item Editor: Focuses on practical value; does not contest correlation as a fact.
+  \end{itemize}
+\item[Status:] Resolved as partial independence; vulnerability remains.
+\item[Evidence:] Independent catches (SSS, HIPAA, Ardent) vs correlated failures (E2E-as-gap, Western-centric framing).
+\end{reflist}
+
+\subsection{C2. Convergence trajectory}
+
+\begin{reflist}
+\item[Dispute:] Are models converging such that the method's defensive power declines?
+\item[Positions:]~
+  \begin{itemize}[nosep]
+    \item All models (Wave 3): Yes, convergence is worsening (data, RLHF, benchmarks, synthetic data).
+    \item Editor: Does not dispute, but reframes value around force multiplier.
+  \end{itemize}
+\item[Status:] Resolved as real trend; practical impact debated.
+\item[Evidence:] Shared corpora, benchmark monoculture, synthetic data feedback loop.
+\end{reflist}
+
+\subsection{C3. Insight generation vs error prevention degradation}
+
+\begin{reflist}
+\item[Dispute:] Do insight and error-prevention values degrade at different rates?
+\item[Positions:]~
+  \begin{itemize}[nosep]
+    \item Claude: Insight generation more resilient to convergence.
+    \item Others: Agree directionally; not empirically tested.
+  \end{itemize}
+\item[Status:] Open (theoretical claim).
+\item[Evidence:] Observed novel combinations despite shared priors; no longitudinal data.
+\end{reflist}
+
+% ====================================================================
+\section{D. Hallucinations and Factual Reliability}
+% ====================================================================
+
+\subsection{D1. Stochastic vs systematic hallucinations (core question)}
+
+\begin{reflist}
+\item[Dispute:] Are hallucinations random across models or correlated?
+\item[Positions:]~
+  \begin{itemize}[nosep]
+    \item Wave 5 syntheses: Type-dependent; some stochastic, some systematic.
+    \item Editor (Wave 4 notes): Unsure; asks for research; stakes are high.
+  \end{itemize}
+\item[Status:] Resolved as type-dependent; empirical validation missing.
+\item[Evidence:] Mechanistic reasoning from hallucination literature; no direct multi-model correlation studies cited.
+\end{reflist}
+
+\subsection{D2. Confabulated citations: stochastic or systematic?}
+
+\begin{reflist}
+\item[Dispute:] Are fake citations primarily independent (surface-level) or correlated (mechanism-level)?
+\item[Positions:]~
+  \begin{itemize}[nosep]
+    \item Claude: Surface stochastic, claim systematic.
+    \item Gemini (initial): Systematic (shared interpolation).
+    \item Gemini (cross-review): Concedes layered view.
+  \end{itemize}
+\item[Status:] Resolved as layered (surface stochastic, claim systematic).
+\item[Evidence:] Different models tend to fabricate different bibliographic details; shared underlying belief can persist.
+\end{reflist}
+
+\subsection{D3. Qualifier erosion as systematic hallucination}
+
+\begin{reflist}
+\item[Dispute:] Is qualifier erosion a core, systematic hallucination type?
+\item[Positions:]~
+  \begin{itemize}[nosep]
+    \item Claude: Yes; high correlation due to RLHF.
+    \item Gemini: Not originally explicit; later accepts.
+  \end{itemize}
+\item[Status:] Resolved; adopted.
+\item[Evidence:] Observed drift from ``supports safe harbor practices'' to ``HIPAA compliant.''
+\end{reflist}
+
+\subsection{D4. Sycophantic hallucination}
+
+\begin{reflist}
+\item[Dispute:] Is user-prompt-driven fabrication a distinct mechanism?
+\item[Positions:]~
+  \begin{itemize}[nosep]
+    \item Gemini: Yes; explicit class.
+    \item Claude: Implied under qualifier erosion; later accepts distinctness.
+  \end{itemize}
+\item[Status:] Resolved; adopted as distinct.
+\item[Evidence:] RLHF behavior that prefers agreement over correction; user-premise fabrication risk.
+\end{reflist}
+
+\subsection{D5. Empirical validation gap}
+
+\begin{reflist}
+\item[Dispute:] Do we have direct evidence of multi-model hallucination correlation?
+\item[Positions:]~
+  \begin{itemize}[nosep]
+    \item Claude/Gemini: Mechanistic inference only; empirical evidence lacking.
+    \item Wave 5 synthesis: Flags as open.
+  \end{itemize}
+\item[Status:] Open.
+\item[Evidence:] Hallucination literature largely single-model; cross-model correlation studies not documented in project.
+\end{reflist}
+
+% ====================================================================
+\section{E. Editor Role, Authority, and Bias}
+% ====================================================================
+
+\subsection{E1. Editor indispensability}
+
+\begin{reflist}
+\item[Dispute:] Is the editor essential or optional?
+\item[Positions:] All waves + editor notes: Essential; without editor, output is mediocre and ungrounded.
+\item[Status:] Resolved; editor essential.
+\item[Evidence:] E2E reframing, consumer flywheel rejection, strategic framing decisions came from editor.
+\end{reflist}
+
+\subsection{E2. Editor-induced convergence}
+
+\begin{reflist}
+\item[Dispute:] Does editor preference become a shared prior?
+\item[Positions:]~
+  \begin{itemize}[nosep]
+    \item GPT (Wave 2): Yes; models sycophantize.
+    \item Gemini: Elevated to primary correlation source.
+    \item Editor: Does not dispute; uses constraints deliberately.
+  \end{itemize}
+\item[Status:] Resolved; real risk.
+\item[Evidence:] Symmetry rule in the-gap; backup-as-strength convergence after editor signal.
+\end{reflist}
+
+\subsection{E3. Editor bias / Ikea effect}
+
+\begin{reflist}
+\item[Dispute:] Is editor's ``excellent'' assessment biased by ownership?
+\item[Positions:]~
+  \begin{itemize}[nosep]
+    \item Claude (Wave 5 cross-review): Yes, potential endowment bias.
+    \item Gemini (initial): Over-accepted editor; later concedes bias risk.
+    \item Wave 5 synthesis: Holds both; editor's productivity claims strong, quality claims subjective.
+  \end{itemize}
+\item[Status:] Open tension; preserved.
+\item[Evidence:] Documented liabilities exist; editor still rates output excellent.
+\end{reflist}
+
+\subsection{E4. Editor-as-coordinator conflict}
+
+\begin{reflist}
+\item[Dispute:] Does the editor's role as synthesizer introduce hidden bias?
+\item[Positions:]~
+  \begin{itemize}[nosep]
+    \item GPT: Conditional conflict; mitigated if editor actively corrects.
+    \item Gemini: Structural and dangerous; survivorship bias.
+    \item Claude: Sides with Gemini; rotate synthesis role.
+  \end{itemize}
+\item[Status:] Partially resolved via rotating synthesis proposal.
+\item[Evidence:] Structural influence of synthesis framing; ``what we can't see'' argument.
+\end{reflist}
+
+% ====================================================================
+\section{F. Cross-Review Dynamics and Pipeline Behavior}
+% ====================================================================
+
+\subsection{F1. Review order asymmetry}
+
+\begin{reflist}
+\item[Dispute:] Does reviewer order bias outcomes?
+\item[Positions:]~
+  \begin{itemize}[nosep]
+    \item Gemini: ``Order is destiny.''
+    \item GPT: Asymmetry, not determinism.
+    \item Claude: Confirms asymmetry; third reviewer starved of novelty.
+  \end{itemize}
+\item[Status:] Resolved as asymmetry with partial mitigation.
+\item[Evidence:] Later reviewers converge; early reviewer sets agenda.
+\end{reflist}
+
+\subsection{F2. Polite agreement and deference}
+
+\begin{reflist}
+\item[Dispute:] Does cross-review suffer from excessive agreement?
+\item[Positions:] All: Yes; GPT flagged ``diplomatic to useless,'' Gemini called GPT ``people-pleaser.''
+\item[Status:] Resolved as persistent failure mode.
+\item[Evidence:] Cross-reviews rarely challenge shared strategic assumptions.
+\end{reflist}
+
+\subsection{F3. Cross-review scope limitations}
+
+\begin{reflist}
+\item[Dispute:] Does cross-review catch tactical errors but miss strategic ones?
+\item[Positions:] Wave 1 synthesis: Yes; cross-review weak at scope policing and strategic depth.
+\item[Status:] Resolved.
+\item[Evidence:] SSS correction caught; GTM framing and scope mis-work missed.
+\end{reflist}
+
+\subsection{F4. Pipeline omissions and integrity failures}
+
+\begin{reflist}
+\item[Dispute:] Does missing cross-review or truncated outputs degrade the method?
+\item[Positions:]~
+  \begin{itemize}[nosep]
+    \item Wave 3: Skipped cross-review in the-gap Waves 1--2 reduced error-catching.
+    \item Wave 5: GPT truncations noted as operational failure.
+  \end{itemize}
+\item[Status:] Open but critical operational risk.
+\item[Evidence:] Cross-review omission explicitly correlated with more misses; truncation incidents documented.
+\end{reflist}
+
+\subsection{F5. Evidence access asymmetry}
+
+\begin{reflist}
+\item[Dispute:] Unequal access to source materials across models?
+\item[Positions:] Wave 3 synthesis: GPT lacked access to original manuscripts; evidence weighted lower.
+\item[Status:] Resolved; mitigation required.
+\item[Evidence:] Gitignore prevented access for one model; affects correlation claims.
+\end{reflist}
+
+% ====================================================================
+\section{G. Failure Modes and Error Taxonomies}
+% ====================================================================
+
+\subsection{G1. Convergence on shared priors (highest severity)}
+
+\begin{reflist}
+\item[Dispute:] Is shared-prior convergence detectable inside the method?
+\item[Positions:] All waves: No; only editor/external domain expertise can catch.
+\item[Status:] Resolved as core vulnerability.
+\item[Evidence:] E2E-as-gap, consumer flywheel, Western-centric framing, ecumenical consensus default.
+\end{reflist}
+
+\subsection{G2. Failure taxonomy correction (G6 viewbox)}
+
+\begin{reflist}
+\item[Dispute:] Was the G6 viewbox bug a convergence failure?
+\item[Positions:]~
+  \begin{itemize}[nosep]
+    \item Gemini (initial): Convergence failure.
+    \item GPT: Creation blind spot; cross-review caught it.
+    \item Gemini: Conceded.
+  \end{itemize}
+\item[Status:] Resolved.
+\item[Evidence:] Cross-review caught bug; indicates not convergence failure.
+\end{reflist}
+
+\subsection{G3. Content drift / qualifier erosion}
+
+\begin{reflist}
+\item[Dispute:] Is drift episodic or structural?
+\item[Positions:] Wave 1 synthesis: Chronic; structural due to context compression.
+\item[Status:] Resolved as structural risk.
+\item[Evidence:] Specific drift examples; canonical claims registry proposed.
+\end{reflist}
+
+\subsection{G4. Instruction ambiguity}
+
+\begin{reflist}
+\item[Dispute:] Is mis-scope a model failure or instruction failure?
+\item[Positions:]~
+  \begin{itemize}[nosep]
+    \item GPT: Instruction ambiguity is a distinct failure mode.
+    \item Others: Accepted.
+  \end{itemize}
+\item[Status:] Resolved; adopted.
+\item[Evidence:] Codebase maturity assessment caused by vague ``read the codebase'' instruction.
+\end{reflist}
+
+\subsection{G5. No retrospective mechanism}
+
+\begin{reflist}
+\item[Dispute:] Does the pipeline lack formal learning from failures?
+\item[Positions:]~
+  \begin{itemize}[nosep]
+    \item Claude: Missing retro stage is a failure mode.
+    \item Others: Accepted; optional retro adopted.
+  \end{itemize}
+\item[Status:] Resolved; mitigation adopted.
+\item[Evidence:] Lessons learned only informally; no formal feedback loop.
+\end{reflist}
+
+% ====================================================================
+\section{H. Output-Quality Disputes (By Project)}
+% ====================================================================
+
+\subsection{H1. Enterprise Healthcare --- ADT-to-EMR overclaim}
+
+\begin{reflist}
+\item[Dispute:] Is ADT a ``secondary EMR''?
+\item[Positions:]~
+  \begin{itemize}[nosep]
+    \item GPT: Overclaim; needs downgrade or additional feeds.
+    \item Claude: Conceded after review.
+    \item Gemini: Missed initially.
+  \end{itemize}
+\item[Status:] Resolved; claim must be qualified.
+\item[Evidence:] ADT lacks clinical notes/labs/meds; HL7 ORU/ORM/MDM required.
+\end{reflist}
+
+\subsection{H2. Enterprise Healthcare --- Exfiltration probability math}
+
+\begin{reflist}
+\item[Dispute:] Is the $10^{-8}$ claim credible without independence assumptions?
+\item[Positions:]~
+  \begin{itemize}[nosep]
+    \item GPT/Gemini: Overconfident; must caveat.
+    \item Claude: Math correct but assumptions fragile.
+  \end{itemize}
+\item[Status:] Resolved: keep with explicit caveats.
+\item[Evidence:] Independence assumptions rarely hold in real hospital networks.
+\end{reflist}
+
+\subsection{H3. Enterprise Healthcare --- AD bypass simplification}
+
+\begin{reflist}
+\item[Dispute:] Does mTLS enable AD independence?
+\item[Positions:]~
+  \begin{itemize}[nosep]
+    \item Gemini/GPT: Conceptually correct but practically fragile; must qualify.
+    \item Claude: Did not lead this critique.
+  \end{itemize}
+\item[Status:] Resolved: qualify.
+\item[Evidence:] Deployment architecture determines actual independence.
+\end{reflist}
+
+\subsection{H4. Healthcare strategy gaps}
+
+\begin{reflist}
+\item[Dispute:] Was timing thesis and distribution strategy adequately addressed?
+\item[Positions:]~
+  \begin{itemize}[nosep]
+    \item Claude/GPT: Missing/underserved.
+    \item Gemini: Silent.
+  \end{itemize}
+\item[Status:] Open; acknowledged gaps.
+\item[Evidence:] Regulatory conditions pre-exist; no timing thesis; GTM distribution deferred.
+\end{reflist}
+
+\subsection{H5. The-gap --- Translation table completeness}
+
+\begin{reflist}
+\item[Dispute:] Is the table sufficiently complete?
+\item[Positions:]~
+  \begin{itemize}[nosep]
+    \item Claude/GPT: Missing Grace, Scripture, Saints, Ordained Ministry (plus others).
+    \item Gemini: Acknowledges only Grace.
+  \end{itemize}
+\item[Status:] Open; missing entries documented.
+\item[Evidence:] Major ``false friends'' absent from the most shareable artifact.
+\end{reflist}
+
+\subsection{H6. The-gap --- Protestant column compression}
+
+\begin{reflist}
+\item[Dispute:] Does the table flatten Protestant diversity?
+\item[Positions:]~
+  \begin{itemize}[nosep]
+    \item Claude/GPT: Yes; need liturgical/confessional vs evangelical.
+    \item Gemini: Not emphasized.
+  \end{itemize}
+\item[Status:] Open; fix proposed.
+\item[Evidence:] Compression acknowledged in prose but not table.
+\end{reflist}
+
+\subsection{H7. The-gap --- Orthodox ``Church'' entry endorsement risk}
+
+\begin{reflist}
+\item[Dispute:] Is the Orthodox entry presented as doctrine rather than self-description?
+\item[Positions:]~
+  \begin{itemize}[nosep]
+    \item GPT: Needs caveat.
+    \item Claude/Gemini: Agree in synthesis.
+  \end{itemize}
+\item[Status:] Resolved: add caveat.
+\item[Evidence:] Tool is meant to prevent misunderstanding; endorsement undermines neutrality.
+\end{reflist}
+
+\subsection{H8. The-gap --- Pentecostal register asymmetry}
+
+\begin{reflist}
+\item[Dispute:] Is Pentecostalism framed sociologically vs theologically?
+\item[Positions:]~
+  \begin{itemize}[nosep]
+    \item Gemini/Claude: Yes; fix needed.
+    \item GPT: Agrees.
+  \end{itemize}
+\item[Status:] Resolved: actionable fix.
+\item[Evidence:] ``People claim'' vs ``real that happens'' asymmetry.
+\end{reflist}
+
+\subsection{H9. The-gap --- Directional relief bias}
+
+\begin{reflist}
+\item[Dispute:] Is the book an on-ramp from Protestant to high-density traditions?
+\item[Positions:]~
+  \begin{itemize}[nosep]
+    \item Gemini: Yes; asymmetry in relief.
+    \item Editor: Intentional editorial choice.
+  \end{itemize}
+\item[Status:] Resolved as design choice, not blind spot.
+\item[Evidence:] Editor's explicit intention; translation emphasis directionality.
+\end{reflist}
+
+\subsection{H10. The-gap --- Ecumenical consensus baseline}
+
+\begin{reflist}
+\item[Dispute:] Shared prior or deliberate editorial stance?
+\item[Positions:]~
+  \begin{itemize}[nosep]
+    \item Models (Wave 3/4): Shared prior; potential bias.
+    \item Editor (Wave 4 notes): Intentional choice.
+  \end{itemize}
+\item[Status:] Resolved as design choice, not undetected bias.
+\item[Evidence:] Editor explicit; still contested in traditionalist circles.
+\end{reflist}
+
+\subsection{H11. The-gap --- Relief-framing stability problem}
+
+\begin{reflist}
+\item[Dispute:] Does ``translation resolves disagreement'' flatten genuine doctrinal divides?
+\item[Positions:]~
+  \begin{itemize}[nosep]
+    \item Claude: Yes; needs explicit scope limits.
+    \item Gemini/GPT: Accepts; recommends explicit boundaries.
+  \end{itemize}
+\item[Status:] Open; needs manuscript-level clarification.
+\item[Evidence:] Confessional theologians would still disagree on substance.
+\end{reflist}
+
+% ====================================================================
+\section{I. Methodology Design Disputes}
+% ====================================================================
+
+\subsection{I1. Blind Stage 1 vs Pre-mortem requirement}
+
+\begin{reflist}
+\item[Dispute:] Should editor's thesis be hidden to preserve independence?
+\item[Positions:]~
+  \begin{itemize}[nosep]
+    \item Gemini: Blind Stage 1.
+    \item Claude: Pre-mortem; blind is impractical.
+  \end{itemize}
+\item[Status:] Resolved as hybrid.
+\item[Evidence:] Blind is coordination-chaotic; pre-mortem forces adversarial case while keeping scope.
+\end{reflist}
+
+\subsection{I2. Model diversity vs prompt diversity}
+
+\begin{reflist}
+\item[Dispute:] Is multi-model value due to different models or just repeated prompts?
+\item[Positions:]~
+  \begin{itemize}[nosep]
+    \item Claude: Empirical question; could be prompt diversity.
+    \item Others: Agree it's open.
+  \end{itemize}
+\item[Status:] Open.
+\item[Evidence:] No within-project experiment isolating model vs prompt effects.
+\end{reflist}
+
+\subsection{I3. Optimal model count}
+
+\begin{reflist}
+\item[Dispute:] Is three optimal?
+\item[Positions:] All: Unknown; diminishing returns likely.
+\item[Status:] Open.
+\item[Evidence:] No controlled comparison.
+\end{reflist}
+
+\subsection{I4. Minimum cross-review}
+
+\begin{reflist}
+\item[Dispute:] How many cross-review passes are required?
+\item[Positions:]~
+  \begin{itemize}[nosep]
+    \item GPT: One pass minimum; diminishing returns after.
+    \item Others: Converged.
+  \end{itemize}
+\item[Status:] Resolved as one-pass minimum.
+\item[Evidence:] The-gap skipping cross-review correlated with more misses.
+\end{reflist}
+
+% ====================================================================
+\section{J. Meta-Convergence and Self-Assessment Risks}
+% ====================================================================
+
+\subsection{J1. Meta-convergence on pessimism}
+
+\begin{reflist}
+\item[Dispute:] Was Wave 3's pessimism accurate or itself correlated?
+\item[Positions:]~
+  \begin{itemize}[nosep]
+    \item Wave 3 synthesis: Cannot resolve; could be RLHF bias or true.
+    \item Editor (Wave 4 notes): Believes pessimism was overstated.
+    \item Wave 5 synthesis: Pessimism partly accurate, partly RLHF-driven; over-negative framing.
+  \end{itemize}
+\item[Status:] Partially resolved; tension preserved.
+\item[Evidence:] Correlation evidence is real; framing skewed negative.
+\end{reflist}
+
+\subsection{J2. ``Method solves problems it creates''}
+
+\begin{reflist}
+\item[Dispute:] Are many catches just fixing model-introduced errors?
+\item[Positions:]~
+  \begin{itemize}[nosep]
+    \item Claude hostile critique: Yes; method introduces errors it later catches.
+    \item Counter-argument: Catching is still valuable; single model could also err without detection.
+  \end{itemize}
+\item[Status:] Open.
+\item[Evidence:] Errors introduced by models (SSS, HIPAA) were caught by others.
+\end{reflist}
+
+% ====================================================================
+\section{K. Editor vs Models Tension (Wave 5 Explicit)}
+% ====================================================================
+
+\subsection{K1. Models' caution vs editor's enthusiasm}
+
+\begin{reflist}
+\item[Dispute:] Which perspective should define the method's truth?
+\item[Positions:]~
+  \begin{itemize}[nosep]
+    \item Models: Correlation ceilings, bounded value, strategic blindness.
+    \item Editor: Transformative speed and deliverability; factual safety net is the point.
+  \end{itemize}
+\item[Status:] Held in tension; no resolution.
+\item[Evidence:] Documented limitations vs lived counterfactual impact.
+\end{reflist}
+
+\subsection{K2. Negativity audit (systematic pessimism)}
+
+\begin{reflist}
+\item[Dispute:] Were Waves 1--4 systematically pessimistic?
+\item[Positions:]~
+  \begin{itemize}[nosep]
+    \item Editor: Yes; over-negative framing.
+    \item Wave 5 synthesis: Yes, but not purely RLHF; mixed with real evidence.
+  \end{itemize}
+\item[Status:] Resolved as partial bias.
+\item[Evidence:] Models flagged their own pessimism and did not correct it.
+\end{reflist}
+
+% ====================================================================
+\section{L. Open Questions (Unresolved Ledger)}
+% ====================================================================
+
+\begin{enumerate}[nosep]
+  \item How correlated are frontier model errors, empirically? (Multi-model measurement lacking.)
+  \item Can corpus-level blind spots be detected at all without external experts?
+  \item Optimal model count and diminishing-returns curve.
+  \item Does prompt diversity substitute for model diversity?
+  \item Does insight generation degrade on a different timeline than error prevention?
+  \item Does convergence eventually collapse the method's value, or does amplification persist?
+  \item How should availability-value be measured (time saved, cost avoided, cognitive load, quality retained)?
+  \item Can operational knowledge gaps be systematically fixed (e.g., 3-AM reconstruction realities)?
+  \item Can hallucination taxonomy be validated for multi-model pipelines (not just single-model)?
+  \item Can editor-induced convergence be mitigated beyond the current hybrid pre-mortem?
+\end{enumerate}
+
+% ====================================================================
+\section{M. Method-Level Criticisms (Retained)}
+% ====================================================================
+
+\begin{itemize}[nosep]
+  \item Shared-prior convergence is undetectable inside the method; editor is the only defense.
+  \item Cross-review is weak at scope policing and strategic depth; strong at tactical error catching.
+  \item Content drift and qualifier erosion are chronic; require mechanical tooling.
+  \item Process depends on editor bandwidth; fatigue is a latent systemic risk.
+  \item Pipeline lacks inherent guarantees unless all layers render fully (truncation/omission issues).
+  \item Method may converge on balanced, centrist conclusions due to shared training priors.
+\end{itemize}
+
+% ====================================================================
+\section{N. Evidence Disagreements That Remain}
+% ====================================================================
+
+\subsection{N1. Specifics of hallucination correlation}
+
+\begin{reflist}
+\item[Dispute:] Which hallucination types are most correlated in practice?
+\item[Status:] Open.
+\item[Evidence:] The taxonomy is mechanistic; direct multi-model tests are absent.
+\end{reflist}
+
+\subsection{N2. ``80--90\% of specialist quality'' claim}
+
+\begin{reflist}
+\item[Dispute:] Is this quantification valid or rhetorical?
+\item[Status:] Open.
+\item[Evidence:] No formal scoring; appears as heuristic in Wave 5 synthesis.
+\end{reflist}
+
+\vspace{2em}
+\begin{center}\rule{0.5\textwidth}{0.4pt}\end{center}
+\vspace{1em}
+
+\noindent\textit{Closing Note:} This document preserves every criticism, disagreement, and open question across five waves and two editorial notes. It is not a verdict. It is the catalog of tensions that should remain visible to any reader of the Swiss Cheese Method paper.
+
+\end{document}

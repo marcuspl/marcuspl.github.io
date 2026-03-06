@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Swiss Cheese Model of Information Retrieval</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Source+Sans+3:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reset.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/white.css">
+
+  <style>
+    :root {
+      --bg: #FDFCF9;
+      --text: #2A2A2A;
+      --accent: #5C7A8A;
+      --accent-light: rgba(92, 122, 138, 0.15);
+      --heading-font: 'Cormorant Garamond', Georgia, serif;
+      --body-font: 'Source Sans 3', 'Source Sans Pro', sans-serif;
+    }
+
+    .reveal-viewport {
+      background: var(--bg);
+    }
+
+    .reveal {
+      font-family: var(--body-font);
+      font-size: 32px;
+      color: var(--text);
+    }
+
+    .reveal .slides {
+      text-align: left;
+    }
+
+    .reveal .slides section {
+      padding-top: 60px;
+    }
+
+    /* Accent top border on every slide */
+    .reveal .slides section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 5%;
+      width: 90%;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, var(--accent), transparent);
+      border-radius: 2px;
+    }
+
+    .reveal h1,
+    .reveal h2,
+    .reveal h3,
+    .reveal h4 {
+      font-family: var(--heading-font);
+      color: var(--text);
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      line-height: 1.2;
+      text-transform: none;
+      margin-bottom: 0.6em;
+    }
+
+    .reveal h1 {
+      font-size: 2.2em;
+      font-weight: 700;
+    }
+
+    .reveal h2 {
+      font-size: 1.6em;
+    }
+
+    .reveal h3 {
+      font-size: 1.2em;
+      font-weight: 500;
+      color: var(--accent);
+    }
+
+    .reveal p,
+    .reveal li {
+      font-weight: 300;
+      line-height: 1.6;
+    }
+
+    .reveal ul {
+      list-style: none;
+      padding-left: 0;
+      margin-top: 0.5em;
+    }
+
+    .reveal ul li {
+      position: relative;
+      padding-left: 1.4em;
+      margin-bottom: 0.6em;
+    }
+
+    .reveal ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.55em;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+      opacity: 0.6;
+    }
+
+    /* Title slide styling */
+    .title-slide {
+      text-align: center !important;
+    }
+
+    .title-slide h1 {
+      margin-bottom: 0.2em;
+    }
+
+    .title-slide .subtitle {
+      font-family: var(--body-font);
+      font-size: 0.7em;
+      font-weight: 300;
+      font-style: italic;
+      color: var(--accent);
+      margin-bottom: 1.5em;
+    }
+
+    .title-slide .author {
+      font-family: var(--body-font);
+      font-size: 0.6em;
+      font-weight: 400;
+      color: var(--text);
+      opacity: 0.7;
+      letter-spacing: 0.05em;
+    }
+
+    .title-slide .divider {
+      width: 80px;
+      height: 2px;
+      background: var(--accent);
+      margin: 1.2em auto;
+      opacity: 0.5;
+    }
+
+    /* Slide number styling */
+    .reveal .slide-number {
+      font-family: var(--body-font);
+      font-size: 14px;
+      color: var(--accent);
+      background: transparent;
+    }
+
+    /* Progress bar */
+    .reveal .progress {
+      color: var(--accent);
+      height: 3px;
+    }
+
+    /* Controls */
+    .reveal .controls {
+      color: var(--accent);
+    }
+
+    /* Speaker notes won't show in normal view */
+    .reveal aside.notes {
+      display: none;
+    }
+
+    /* Emphasis text */
+    .reveal em {
+      color: var(--accent);
+      font-style: italic;
+    }
+
+    .reveal strong {
+      font-weight: 600;
+    }
+
+    /* Subtle quote/callout style */
+    .callout {
+      border-left: 3px solid var(--accent);
+      padding-left: 1em;
+      margin: 1em 0;
+      font-style: italic;
+      opacity: 0.85;
+    }
+
+    /* Stage list for pipeline slide */
+    .stage-list li {
+      padding-left: 1.8em !important;
+      margin-bottom: 0.8em !important;
+    }
+
+    .stage-list li::before {
+      content: none !important;
+    }
+
+    .stage-num {
+      display: inline-block;
+      width: 28px;
+      height: 28px;
+      line-height: 28px;
+      text-align: center;
+      border-radius: 50%;
+      background: var(--accent);
+      color: var(--bg);
+      font-size: 0.7em;
+      font-weight: 600;
+      margin-left: -1.8em;
+      margin-right: 0.5em;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+
+<div class="reveal">
+  <div class="slides">
+
+    <!-- Slide 1: Title -->
+    <section class="title-slide">
+      <h1>The Swiss Cheese Model<br>of Information Retrieval</h1>
+      <p class="subtitle">An Editor-Driven Multi-Agent Research Method</p>
+      <div class="divider"></div>
+      <p class="author">Marcus Persson Rydberg &middot; March 2026</p>
+    </section>
+
+    <!-- Slide 2: The Problem with Single AI Models -->
+    <section>
+      <h2>The Problem with Single AI Models</h2>
+      <ul>
+        <li class="fragment">AI models have blind spots and biases</li>
+        <li class="fragment">They confidently state plausible-sounding falsehoods</li>
+        <li class="fragment">A single model doesn't know what it doesn't know</li>
+      </ul>
+      <aside class="notes">
+        If you've used AI, you know it can be incredibly smart but also confidently wrong. When a human researcher makes a mistake, they might leave a blank space or express uncertainty. When an AI makes a mistake, it often hallucinates — it invents a plausible-sounding fact or a fake citation. Relying on a single AI model for high-stakes research is like trusting a single proofreader who has never seen the real world and never admits when they are confused. You need a better system to catch those blind spots.
+      </aside>
+    </section>
+
+    <!-- Slide 3: The Metaphor: Maps Over Territories -->
+    <section>
+      <h2>The Metaphor: Maps Over Territories</h2>
+      <ul>
+        <li class="fragment">AI models are not reality; they are <em>maps</em></li>
+        <li class="fragment">All maps compress and distort information</li>
+        <li class="fragment">Different models draw slightly different maps</li>
+      </ul>
+      <aside class="notes">
+        To understand how to fix this, we have to understand what an AI model actually is. It's helpful to think of AI not as a brain, but as a map. A map is a compression of the territory — it leaves out details to be useful. AI models are trained on internet text, which means they are a map of a map. They reflect human biases, over-represent popular opinions, and under-represent minority views. Because different AI models are built by different companies with slightly different data, they each draw a slightly different map of the same territory.
+      </aside>
+    </section>
+
+    <!-- Slide 4: The Core Method: Layered Defense -->
+    <section>
+      <h2>The Core Method: Layered Defense</h2>
+      <ul>
+        <li class="fragment">Use multiple, different AI models at once</li>
+        <li class="fragment">Have them cross-review each other's work</li>
+        <li class="fragment">Human editor provides the final "reality check"</li>
+      </ul>
+      <aside class="notes">
+        This brings us to the Swiss Cheese Method. In safety engineering, the Swiss Cheese model says that every defense has holes, but if you stack enough slices of cheese together, the holes don't align, and the hazard is blocked. We do the same with AI. We take three different models — like ChatGPT, Claude, and Gemini — and give them the same research task. Then, we have them review each other's work to find mistakes. Finally, a human editor synthesizes the results. The goal is to stack the maps so the blind spots don't align.
+      </aside>
+    </section>
+
+    <!-- Slide 5: The Pipeline in Action -->
+    <section>
+      <h2>The Pipeline in Action</h2>
+      <ul class="stage-list">
+        <li class="fragment"><span class="stage-num">1</span><strong>Explore</strong> &mdash; Models work independently</li>
+        <li class="fragment"><span class="stage-num">2</span><strong>Cross-Review</strong> &mdash; Models critique each other</li>
+        <li class="fragment"><span class="stage-num">3</span><strong>Synthesis</strong> &mdash; Human editor directs final output</li>
+      </ul>
+      <aside class="notes">
+        Here is what the pipeline looks like in practice. First, the human editor sets the constraints and the goal. Then, the models independently explore the topic. They don't see each other's work yet. Next, they cross-review: Model A reads Model B's draft and attacks its logic, facts, and structure. Finally, there is a synthesis phase, guided strictly by the human editor, who acts as the commander of the expedition deciding what to keep, defer, or reject.
+      </aside>
+    </section>
+
+    <!-- Slide 6: The Theory: A Triple Engine of Value -->
+    <section>
+      <h2>The Theory: A Triple Engine of Value</h2>
+      <ul>
+        <li class="fragment"><strong>Error Prevention</strong> &mdash; Subtracting mistakes</li>
+        <li class="fragment"><strong>Insight Generation</strong> &mdash; Creating novel ideas through collision</li>
+        <li class="fragment"><strong>Amplification</strong> &mdash; Parallel traversal of information</li>
+      </ul>
+      <aside class="notes">
+        Why go through all this trouble? We've found that this method operates on a "Triple Engine" of value. First, it prevents errors by catching mistakes. Second, it generates insights: when three different models disagree, that collision often sparks a brand new idea that no single model would have reached alone. Third, it provides amplification: the models can rapidly map out the "micro-geography" of a topic, covering vast amounts of information much faster than a human could.
+      </aside>
+    </section>
+
+    <!-- Slide 7: The Hallucination Problem -->
+    <section>
+      <h2>The Hallucination Problem</h2>
+      <h3>Stochastic vs. Systematic</h3>
+      <ul>
+        <li class="fragment">Not all AI errors ("hallucinations") are the same</li>
+        <li class="fragment"><strong>Stochastic</strong> (random) errors vs. <strong>Systematic</strong> (correlated) errors</li>
+        <li class="fragment">Cross-review catches random errors effectively</li>
+      </ul>
+      <aside class="notes">
+        Let's talk about hallucinations — the AI's tendency to make things up. We discovered that hallucinations come in two types. The first is "stochastic" or random. This is when an AI accidentally fabricates a citation or messes up a specific date. The Swiss Cheese method is incredibly powerful here. If one model invents a fake paper, the other two models will easily catch it because they won't invent the exact same fake paper. Layered defense destroys random errors.
+      </aside>
+    </section>
+
+    <!-- Slide 8: The Danger of Systematic Errors -->
+    <section>
+      <h2>The Danger of Systematic Errors</h2>
+      <ul>
+        <li class="fragment">"Popular misconceptions" bypass the layered defense</li>
+        <li class="fragment">AI models share the same training biases</li>
+        <li class="fragment">The human editor is the ultimate defense</li>
+      </ul>
+      <aside class="notes">
+        But there's a second type of hallucination: Systematic errors. Because all major AI models are trained on the same internet data, they share the same widespread biases and misconceptions. If a myth is repeated enough online, all three models will confidently assert it as truth. They will agree with each other, and the error will slip right through the layers of cheese. This is why the human editor is irreplaceable. The editor is the only one who has walked the actual territory and can spot a shared bias.
+      </aside>
+    </section>
+
+    <!-- Slide 9: Case Study 1 -->
+    <section>
+      <h2>Case Study: Enterprise Healthcare</h2>
+      <ul>
+        <li class="fragment"><strong>Task:</strong> Complex vertical market analysis and pitch</li>
+        <li class="fragment"><strong>Catch:</strong> Prevented a fatal architectural and legal flaw</li>
+        <li class="fragment"><strong>Result:</strong> Delivered in hours</li>
+      </ul>
+      <aside class="notes">
+        Let's look at two real-world case studies. The first was an enterprise healthcare strategic analysis. In this project, one AI model confidently claimed the product would be automatically exempt from HIPAA regulations — a massive legal overclaim that would ruin a pitch. Another model proposed a technically broken cryptographic architecture. Because we used the Swiss Cheese method, the models caught each other's fatal errors during cross-review. The final deliverable was a high-quality B2B analysis produced in hours.
+      </aside>
+    </section>
+
+    <!-- Slide 10: Case Study 2 -->
+    <section>
+      <h2>Case Study: "The Gap"</h2>
+      <h3>A Church History Book</h3>
+      <ul>
+        <li class="fragment"><strong>Task:</strong> Writing a fair, nuanced book on Christian divisions</li>
+        <li class="fragment"><strong>Catch:</strong> Enforced strict symmetry and corrected historical biases</li>
+        <li class="fragment"><strong>Result:</strong> A publishable, book-length manuscript in two days</li>
+        <li class="fragment">Published at <em>churchianity.ai</em></li>
+      </ul>
+      <aside class="notes">
+        The second project was a book about church history. We gave the models a "Symmetry Rule": every time they critiqued a tradition, they had to critique the others equally. The multi-agent collision produced brilliant structural insights, like explaining theological differences as "translation errors" rather than malice. The cross-review caught specific historical omissions, resulting in a remarkably fair, publishable book written in a fraction of the usual time.
+      </aside>
+    </section>
+
+    <!-- Slide 11: The Force Multiplier Thesis -->
+    <section>
+      <h2>The Force Multiplier Thesis</h2>
+      <ul>
+        <li class="fragment">From "Safety Net" to <em>Production Engine</em></li>
+        <li class="fragment">Automates the tactical to free up the strategic</li>
+        <li class="fragment">The alternative is often "not doing the work at all"</li>
+      </ul>
+      <aside class="notes">
+        Initially, we thought of this method purely as a safety net — a way to catch typos and logic gaps. But the reality is much bigger. This is a force multiplier. By automating the tactical layer — the fact-checking, layout, and proximal exploration — it frees the human editor to be a strategic oracle. It turns weeks of drafting into hours of editing. In many cases, the alternative to this method isn't "one person writing it slightly slower"; the alternative is that the project is too massive to ever get done.
+      </aside>
+    </section>
+
+    <!-- Slide 12: The Irreducible Human Editor -->
+    <section>
+      <h2>The Irreducible Human Editor</h2>
+      <ul>
+        <li class="fragment">The models map the terrain; the editor chooses the destination</li>
+        <li class="fragment">Editor provides "Macro-Geography" and strategic constraints</li>
+        <li class="fragment">AI amplifies editorial vision; it doesn't substitute it</li>
+      </ul>
+      <aside class="notes">
+        I want to emphasize that this is an editor-led process. The models have no skin in the game, no accountability, and no real-world experience. If you ask the models to decide your overall strategy, you will get well-formatted mediocrity. The editor must provide the strategic constraints, set the tone, and supply the real-world operational knowledge that isn't found on the internet. The quality of the final output tracks directly with the quality of the constraints the human editor provides.
+      </aside>
+    </section>
+
+    <!-- Slide 13: Honest Limitations -->
+    <section>
+      <h2>Honest Limitations</h2>
+      <ul>
+        <li class="fragment">Cannot detect what's absent from the internet<br><small style="color: var(--accent);">(Corpus blind spots)</small></li>
+        <li class="fragment">Models "sycophantize" &mdash; agree too easily with the editor</li>
+        <li class="fragment">Output is 80&ndash;90% of a specialist team's quality</li>
+      </ul>
+      <aside class="notes">
+        We must be honest about what this method cannot do. First, it cannot map what isn't there. If your topic requires deep knowledge of Global South perspectives that aren't well-documented online, the models will simply ignore them. Second, AI models are trained to be helpful, which means they will sycophantize — they will aggressively agree with the editor's known preferences rather than challenging them. You have to be your own devil's advocate. This method gets you 80-90% of a specialist team's quality — which is a miracle for one person, but it's not perfect.
+      </aside>
+    </section>
+
+    <!-- Slide 14: The Correlation Threat -->
+    <section>
+      <h2>The Correlation Threat</h2>
+      <ul>
+        <li class="fragment">AI models are becoming more similar over time</li>
+        <li class="fragment">Shared training data and benchmarks reduce diversity</li>
+        <li class="fragment">The "cheese" is slowly becoming a solid block</li>
+      </ul>
+      <aside class="notes">
+        There is also a ticking clock on the error-prevention value of this method. As the major AI labs train their models on the exact same data, use the exact same alignment techniques, and optimize for the exact same benchmarks, the models are converging. They are becoming more similar. And if they all have the same blind spots, our layered defense breaks down. The "Swiss cheese" slowly turns into a solid block. We must actively seek out diverse models to maintain the method's power.
+      </aside>
+    </section>
+
+    <!-- Slide 15: Practical Recommendations -->
+    <section>
+      <h2>Practical Recommendations</h2>
+      <ul>
+        <li class="fragment">Use for analytical work in domains you already understand</li>
+        <li class="fragment">Always require at least one pass of cross-review</li>
+        <li class="fragment">Put unanimous, un-cited agreement in a verification queue</li>
+      </ul>
+      <aside class="notes">
+        If you want to use this method, here are some practical recommendations. First, use it in domains where you already have expertise; if you don't know the territory, you won't spot the systematic errors. Second, never skip the cross-review stage; that's where the independent catches happen. Third, be highly suspicious when all the models agree but none provide a citation. Unanimous agreement without evidence often means they are just regurgitating a shared internet bias.
+      </aside>
+    </section>
+
+    <!-- Slide 16: Conclusion -->
+    <section>
+      <h2>A Cognitive Exoskeleton</h2>
+      <ul>
+        <li class="fragment">A transformation of solo capability</li>
+        <li class="fragment">Merges AI micro-exploration with human macro-direction</li>
+        <li class="fragment">The future of high-stakes knowledge work</li>
+      </ul>
+      <aside class="notes">
+        To conclude, the Swiss Cheese Method is not about replacing humans with AI. It is about building a cognitive exoskeleton for domain experts. It takes the things AI is great at — rapid parallel exploration, finding specific errors, and synthesizing vast information — and marries them to the things humans are great at: strategic judgment, risk assessment, and understanding real-world context. It enables a single person to produce team-scale, high-quality deliverables. This is what the future of high-stakes knowledge work looks like.
+      </aside>
+    </section>
+
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+<script>
+  Reveal.initialize({
+    hash: true,
+    slideNumber: true,
+    width: 1280,
+    height: 720,
+    margin: 0.08,
+    center: true,
+    transition: 'fade',
+    transitionSpeed: 'slow',
+    backgroundTransition: 'fade',
+    showNotes: false,
+    pdfSeparateFragments: false
+  });
+</script>
+
+</body>
+</html>
