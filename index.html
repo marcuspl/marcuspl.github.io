@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marcus Lovett — Writings & Research</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Source+Sans+3:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg: #FDFCF9;
+      --text: #2A2A2A;
+      --text-secondary: #5E5E5E;
+      --accent: #5C7A8A;
+      --accent-hover: #486A7A;
+      --rule: #D4CFC7;
+      --card-bg: #FFFFFF;
+      --card-border: #E8E4DC;
+      --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 4px 12px rgba(0,0,0,0.03);
+    }
+
+    html { font-size: 17px; }
+
+    body {
+      font-family: 'Source Sans 3', 'Georgia', serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .site {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* ---- Header ---- */
+    header {
+      padding: 5rem 0 3rem;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    header h1 {
+      font-family: 'Cormorant Garamond', 'Georgia', serif;
+      font-weight: 500;
+      font-size: 2.4rem;
+      letter-spacing: -0.01em;
+      line-height: 1.2;
+      color: var(--text);
+    }
+
+    header p {
+      margin-top: 0.75rem;
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      font-weight: 300;
+      letter-spacing: 0.02em;
+    }
+
+    /* ---- Sections ---- */
+    section {
+      padding: 2.5rem 0;
+    }
+
+    section + section {
+      border-top: 1px solid var(--rule);
+    }
+
+    .section-label {
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--accent);
+      margin-bottom: 1.5rem;
+    }
+
+    /* ---- Cards ---- */
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 4px;
+      padding: 1.75rem 2rem;
+      margin-bottom: 1rem;
+      box-shadow: var(--card-shadow);
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      border-color: #CDC8BF;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.06), 0 6px 20px rgba(0,0,0,0.04);
+    }
+
+    .card h2 {
+      font-family: 'Cormorant Garamond', 'Georgia', serif;
+      font-weight: 500;
+      font-size: 1.45rem;
+      line-height: 1.3;
+      margin-bottom: 0.4rem;
+    }
+
+    .card h2 a {
+      color: var(--text);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s ease;
+    }
+
+    .card h2 a:hover {
+      border-bottom-color: var(--accent);
+    }
+
+    .card .subtitle {
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      font-style: italic;
+      font-weight: 300;
+      margin-bottom: 0.85rem;
+    }
+
+    .card .description {
+      font-size: 0.92rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+
+    .card .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 1.25rem;
+      font-size: 0.82rem;
+    }
+
+    .card .links a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 400;
+      letter-spacing: 0.01em;
+      transition: color 0.15s ease;
+    }
+
+    .card .links a:hover {
+      color: var(--accent-hover);
+    }
+
+    .card .links a::before {
+      content: '';
+      display: inline-block;
+      width: 0;
+      height: 0;
+      border-left: 4px solid var(--accent);
+      border-top: 3px solid transparent;
+      border-bottom: 3px solid transparent;
+      margin-right: 0.35rem;
+      position: relative;
+      top: -0.5px;
+    }
+
+    .card .links .secondary {
+      color: var(--text-secondary);
+      font-size: 0.78rem;
+    }
+
+    .card .links .secondary:hover {
+      color: var(--accent);
+    }
+
+    .card .links .secondary::before {
+      border-left-color: var(--text-secondary);
+    }
+
+    .card .links .secondary:hover::before {
+      border-left-color: var(--accent);
+    }
+
+    .card .venue {
+      font-size: 0.78rem;
+      color: #8A8A8A;
+      margin-top: 0.5rem;
+    }
+
+    /* ---- Footer ---- */
+    footer {
+      border-top: 1px solid var(--rule);
+      padding: 2rem 0 3rem;
+      font-size: 0.78rem;
+      color: #A0A0A0;
+      font-weight: 300;
+      letter-spacing: 0.02em;
+    }
+
+    /* ---- Responsive ---- */
+    @media (max-width: 600px) {
+      html { font-size: 16px; }
+
+      header {
+        padding: 3.5rem 0 2rem;
+      }
+
+      header h1 {
+        font-size: 1.85rem;
+      }
+
+      .card {
+        padding: 1.25rem 1.35rem;
+      }
+
+      .card h2 {
+        font-size: 1.25rem;
+      }
+
+      .card .links {
+        flex-direction: column;
+        gap: 0.4rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="site">
+
+    <header>
+      <h1>Marcus Lovett</h1>
+      <p>Writings & Research</p>
+    </header>
+
+    <section>
+      <div class="section-label">Research</div>
+
+      <div class="card">
+        <h2><a href="swiss-cheese-method/">The Swiss Cheese Model of Information Retrieval</a></h2>
+        <div class="subtitle">An Editor-Driven Multi-Agent Research Method</div>
+        <div class="description">
+          A method for producing complex research deliverables using multiple large language models under human editorial direction. Grounded in Reason's accident causation model, Surowiecki's crowd wisdom, and Condorcet's jury theorem, with empirical evidence from two substantial projects.
+        </div>
+        <div class="links">
+          <a href="swiss-cheese-method/">Read the paper</a>
+          <a href="swiss-cheese-method/Swiss-Cheese-Model-Paper.pdf">Download PDF</a>
+          <a class="secondary" href="swiss-cheese-method/Swiss-Cheese-Model-Presentation.pdf">Presentation</a>
+          <a class="secondary" href="swiss-cheese-method/Swiss-Cheese-Model-Reference.pdf">Reference criticisms</a>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-label">Books & Essays</div>
+
+      <div class="card">
+        <h2><a href="https://churchianity.ai">The Gap</a></h2>
+        <div class="subtitle">Mapping the Terrain of Christian Division</div>
+        <div class="description">
+          A book-length exploration of why Christianity fractured into Catholic, Orthodox, and Protestant traditions &mdash; treating each tradition's authority structure as a distinct grammar rather than a competing truth claim. Includes a translation table of theological "false friends" and an ecumenical chapter on convergence.
+        </div>
+        <div class="links">
+          <a href="https://churchianity.ai">Read at churchianity.ai</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2><a href="https://marcuspl.github.io/pascha-not-easter/">Pascha, Not Easter</a></h2>
+        <div class="subtitle">On the original name and meaning of the feast</div>
+        <div class="description">
+          A short exploration of why the early church called it Pascha, what changed, and what the original name reveals about the feast's meaning.
+        </div>
+        <div class="links">
+          <a href="https://marcuspl.github.io/pascha-not-easter/">Read online</a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      Marcus Lovett, 2026
+    </footer>
+
+  </div>
+</body>
+</html>
