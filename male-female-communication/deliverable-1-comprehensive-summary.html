@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Deliverable 1: Comprehensive Summary — Male–Female Communication Patterns</title>
+  <meta name="description" content="The full research synthesis. Covers the gender-similarities baseline, power as the primary predictor of communication behavior, the enforcement layer that maintains gaps after power is equalized, what actually works (with effect sizes), and what remains unresolved.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Source+Sans+3:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+  <style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --bg: #FDFCF9;
+    --text: #2A2A2A;
+    --text-secondary: #5E5E5E;
+    --accent: #5C7A8A;
+    --accent-hover: #486A7A;
+    --rule: #D4CFC7;
+    --card-bg: #FFFFFF;
+    --card-border: #E8E4DC;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 4px 12px rgba(0,0,0,0.03);
+  }
+
+  html { font-size: 17px; }
+
+  body {
+    font-family: 'Source Sans 3', 'Georgia', serif;
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .site {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { color: var(--accent-hover); }
+
+  footer {
+    border-top: 1px solid var(--rule);
+    padding: 2rem 0 3rem;
+    font-size: 0.78rem;
+    color: #A0A0A0;
+    font-weight: 300;
+    letter-spacing: 0.02em;
+  }
+
+  @media (max-width: 600px) {
+    html { font-size: 16px; }
+  }
+
+  /* ── Nav ── */
+  .doc-nav {
+    padding: 2rem 0 0;
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+  }
+
+  .doc-nav a {
+    color: var(--text-secondary);
+    transition: color 0.15s;
+  }
+
+  .doc-nav a:hover { color: var(--accent); }
+
+  /* ── Doc header ── */
+  .doc-header {
+    padding: 2.5rem 0 2rem;
+    border-bottom: 1px solid var(--rule);
+    margin-bottom: 2.5rem;
+  }
+
+  .doc-label {
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--accent);
+    margin-bottom: 0.6rem;
+  }
+
+  .doc-header h1 {
+    font-family: 'Cormorant Garamond', 'Georgia', serif;
+    font-weight: 500;
+    font-size: 2.2rem;
+    letter-spacing: -0.01em;
+    line-height: 1.2;
+    color: var(--text);
+    margin-bottom: 0.5rem;
+  }
+
+  .doc-subtitle {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    font-style: italic;
+    font-weight: 300;
+    margin-bottom: 1rem;
+  }
+
+  .doc-actions {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    font-size: 0.82rem;
+    margin-top: 1rem;
+  }
+
+  .doc-actions .btn-pdf {
+    background: var(--accent);
+    color: white;
+    padding: 0.35rem 0.9rem;
+    border-radius: 3px;
+    font-weight: 600;
+    font-size: 0.78rem;
+    letter-spacing: 0.04em;
+    transition: background 0.15s;
+  }
+
+  .doc-actions .btn-pdf:hover { background: var(--accent-hover); color: white; }
+
+  .doc-actions .meta {
+    color: #A0A0A0;
+    font-size: 0.78rem;
+  }
+
+  /* ── Article content ── */
+  article h1, article h2, article h3, article h4 {
+    font-family: 'Cormorant Garamond', 'Georgia', serif;
+    font-weight: 500;
+    color: var(--text);
+    line-height: 1.25;
+    margin-top: 2em;
+    margin-bottom: 0.55em;
+  }
+
+  article h1 { font-size: 1.7rem; border-bottom: 1px solid var(--rule); padding-bottom: 0.3em; }
+  article h2 { font-size: 1.35rem; }
+  article h3 { font-size: 1.1rem; color: var(--accent-hover); }
+
+  article h4 {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-secondary);
+    margin-top: 1.5em;
+  }
+
+  article p { margin-bottom: 0.9em; }
+
+  article ul, article ol {
+    padding-left: 1.6em;
+    margin-bottom: 0.9em;
+  }
+
+  article li { margin-bottom: 0.25em; }
+  article li > ul, article li > ol { margin-top: 0.25em; margin-bottom: 0.25em; }
+
+  article strong { font-weight: 600; }
+
+  article hr {
+    border: none;
+    border-top: 1px solid var(--rule);
+    margin: 2em 0;
+  }
+
+  article blockquote {
+    border-left: 3px solid var(--accent);
+    margin: 1.4em 0;
+    padding: 0.5em 1.2em;
+    color: var(--text-secondary);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.05rem;
+    font-style: italic;
+  }
+
+  article blockquote p { margin: 0; }
+
+  article code {
+    font-family: 'SF Mono', 'Fira Mono', 'Consolas', monospace;
+    font-size: 0.82em;
+    background: rgba(92,122,138,0.09);
+    color: var(--accent-hover);
+    padding: 0.1em 0.35em;
+    border-radius: 2px;
+  }
+
+  article pre {
+    background: rgba(42,42,42,0.04);
+    border-left: 3px solid var(--accent);
+    padding: 0.9em 1.1em;
+    margin: 1.2em 0;
+    font-size: 0.82em;
+    line-height: 1.6;
+    overflow-x: auto;
+  }
+
+  article pre code { background: none; padding: 0; color: var(--text); }
+
+  /* ── Tables ── */
+  article table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+    margin: 1.4em 0;
+  }
+
+  article thead tr { background: var(--accent); }
+
+  article thead th {
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: 600;
+    font-size: 0.72rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: white;
+    padding: 0.5em 0.8em;
+    text-align: left;
+  }
+
+  article tbody tr:nth-child(even) { background: rgba(92,122,138,0.05); }
+
+  article tbody td {
+    padding: 0.45em 0.8em;
+    border-bottom: 1px solid var(--card-border);
+    vertical-align: top;
+    font-size: 0.85rem;
+  }
+
+  @media (max-width: 600px) {
+    .doc-header h1 { font-size: 1.6rem; }
+    article table { font-size: 0.78rem; }
+  }
+</style>
+</head>
+<body>
+  <div class="site">
+
+    <nav class="doc-nav">
+      <a href="./">← Male–Female Communication Patterns</a>
+    </nav>
+
+    <div class="doc-header">
+      <div class="doc-label">Deliverable 1 &nbsp;·&nbsp; Research Pipeline</div>
+      <h1>Comprehensive Summary</h1>
+      <div class="doc-subtitle">Integrating Waves 1–3: Landscape · Power Mechanism · Enforcement Layer</div>
+      <div class="doc-actions">
+        <a class="btn-pdf" href="deliverable-1-comprehensive-summary.pdf">↓ Download PDF</a>
+        <span class="meta">Published March 2026</span>
+      </div>
+    </div>
+
+    <article>
+      <h1 id="male-female-communication-patterns-a-research-summary">Male-Female Communication Patterns: A Research Summary</h1>
+<h3 id="integrating-waves-13-landscape--power-mechanism--enforcement-layer">Integrating Waves 1–3: Landscape · Power Mechanism · Enforcement Layer</h3>
+<hr />
+<h2 id="preface-how-to-read-this-document">Preface: How to Read This Document</h2>
+<p>The popular understanding of gendered communication is saturated with oversimplified narratives — "women talk more," "men are from Mars," "women just need to lean in." The research tells a more precise and more useful story. It has three chapters:</p>
+<ol>
+<li><strong>Most differences are small.</strong> Effect sizes across hundreds of meta-analyses are overwhelmingly in the negligible-to-small range. The distributions overlap far more than they differ.</li>
+<li><strong>Power explains most of what remains.</strong> Communication differences that survive small-effect filtering are largely explained by status and social role, not by sex. When status is equalized, most behavioral gaps close.</li>
+<li><strong>Enforcement explains why the gaps persist anyway.</strong> Even when structural power is equalized, a self-reinforcing mechanism — evaluative asymmetry, self-censorship, and institutional opacity — maintains gendered communication patterns. This mechanism is the reason that equalizing formal power is necessary but not sufficient.</li>
+</ol>
+<p>The practical implication runs throughout: interventions that target individual behavior change (training, coaching, exhortation) consistently underperform interventions that target the evaluation environment and institutional structure.</p>
+<hr />
+<h2 id="part-1-the-baseline--gender-similarities-dominate">Part 1: The Baseline — Gender Similarities Dominate</h2>
+<h3 id="the-hyde-meta-meta-analysis">The Hyde Meta-Meta-Analysis</h3>
+<p>The empirical foundation of the field is <strong>Hyde (2005)</strong>, a meta-analysis of 46 meta-analyses yielding 124 effect sizes. The finding: <strong>78% of gender differences are small (d &lt; 0.35) or negligible (d &lt; 0.10).</strong> This is not a fringe critique of gender research — it is the consensus of the field's most comprehensive synthesis.</p>
+<p>The <strong>Zell, Krizan &amp; Teeter (2015)</strong> meta-synthesis extended this. Analyzing 106 meta-analyses, 21,174 distinct findings, and over 12 million participants, they found an average absolute gender difference of <strong>d = 0.21 (SD = 0.14)</strong> — 46% small, 39% very small. The overlap between male and female distributions across psychological variables is the rule, not the exception.</p>
+<h3 id="the-talkativeness-inversion">The Talkativeness Inversion</h3>
+<p>The "women talk more" claim is one of the most durable myths in the popular literature. <strong>Mehl et al. (2007)</strong> deployed electronically activated recorders on approximately 2,000 participants: both sexes spoke approximately 16,000 words per day (d = 0.07). <strong>Leaper &amp; Ayres (2007)</strong> meta-analysis found adults: men talk slightly more (d = 0.14, M &gt; F). The stereotype is empirically backwards.</p>
+<h3 id="master-effect-size-table-communication-specific-domains">Master Effect Size Table: Communication-Specific Domains</h3>
+<table>
+<thead>
+<tr class="header">
+<th>Domain</th>
+<th>Meta-Analysis</th>
+<th>d</th>
+<th>Direction</th>
+<th>N</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Talkativeness (adults)</td>
+<td>Leaper &amp; Ayres 2007</td>
+<td>0.14</td>
+<td>M &gt; F</td>
+<td>—</td>
+</tr>
+<tr class="even">
+<td>Affiliative speech</td>
+<td>Leaper &amp; Ayres 2007</td>
+<td>0.12</td>
+<td>F &gt; M</td>
+<td>—</td>
+</tr>
+<tr class="odd">
+<td>Assertive speech</td>
+<td>Leaper &amp; Ayres 2007</td>
+<td>0.09</td>
+<td>M &gt; F</td>
+<td>—</td>
+</tr>
+<tr class="even">
+<td>Self-disclosure (overall)</td>
+<td>Dindia &amp; Allen 1992</td>
+<td>0.18</td>
+<td>F &gt; M</td>
+<td>205 studies, N=23,702</td>
+</tr>
+<tr class="odd">
+<td>Self-disclosure (to stranger)</td>
+<td>Dindia &amp; Allen 1992</td>
+<td>0.07</td>
+<td>F &gt; M</td>
+<td>—</td>
+</tr>
+<tr class="even">
+<td>Interruptions (overall)</td>
+<td>Anderson &amp; Leaper 1998</td>
+<td>0.15</td>
+<td>M &gt; F</td>
+<td>43 studies</td>
+</tr>
+<tr class="odd">
+<td>Intrusive interruptions</td>
+<td>Anderson &amp; Leaper 1998</td>
+<td>0.33</td>
+<td>M &gt; F</td>
+<td>—</td>
+</tr>
+<tr class="even">
+<td>Tentative language</td>
+<td>Leaper &amp; Robnett 2011</td>
+<td>0.23</td>
+<td>F &gt; M</td>
+<td>29 studies, N=3,502</td>
+</tr>
+<tr class="odd">
+<td>Smiling (overall)</td>
+<td>LaFrance et al. 2003</td>
+<td>0.41</td>
+<td>F &gt; M</td>
+<td>162 reports</td>
+</tr>
+<tr class="even">
+<td>Smiling (unaware of observation)</td>
+<td>LaFrance et al. 2003</td>
+<td>0.19</td>
+<td>F &gt; M</td>
+<td>—</td>
+</tr>
+<tr class="odd">
+<td>Emotion recognition</td>
+<td>Connolly et al. 2025</td>
+<td>0.24</td>
+<td>F &gt; M</td>
+<td>1,011 studies, N=837,637</td>
+</tr>
+<tr class="even">
+<td>Empathizing (self-report)</td>
+<td>Greenberg et al. 2018</td>
+<td>0.39</td>
+<td>F &gt; M</td>
+<td>N=671,606</td>
+</tr>
+<tr class="odd">
+<td>Negotiation outcomes</td>
+<td>Mazei et al. 2015</td>
+<td>~0.20</td>
+<td>M &gt; F</td>
+<td>123 ESs, N=10,888</td>
+</tr>
+<tr class="even">
+<td>Cooperation</td>
+<td>Balliet et al. 2023</td>
+<td>0.01</td>
+<td>None</td>
+<td>20 societies</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Key pattern:</strong> Nothing in the communication domain exceeds d = 0.50. The largest effect — smiling (d = 0.41) — halves when people don't know they're being observed.</p>
+<h3 id="stereotype-inversions">Stereotype Inversions</h3>
+<p>Several meta-analytic findings directly contradict popular beliefs:</p>
+<ul>
+<li><strong>Men talk more</strong> (d = 0.14, Leaper &amp; Ayres 2007)</li>
+<li><strong>Women and men ask for raises at equal rates</strong> — Artz, Goodall &amp; Oswald (2018): women under 40 have closed the negotiation-initiation gap entirely</li>
+<li><strong>No gender difference in cooperation</strong> (d = 0.01, Balliet et al. 2023, 20 societies)</li>
+<li><strong>Men's apology rate per offense equals women's</strong> — Schumann &amp; Ross (2010): women perceive more offenses; per-offense rates are equal</li>
+</ul>
+<h3 id="the-neuroscience-picture">The Neuroscience Picture</h3>
+<p><strong>What is real after methodological correction:</strong></p>
+<ul>
+<li>Total brain volume: d ≈ 1.4 (males larger) — tracks body size, not cognitive capacity; does not predict communication behavior</li>
+<li>Regional differences: most shrink to d &lt; 0.20 after volume correction (Eliot et al. 2021); sex/gender explains ~1% of total brain variance</li>
+<li>Emotion recognition: d = 0.24, N = 837,637 (Connolly et al. 2025) — small but extremely robust; represents a perceptual-capacity difference, not a conversational-behavior difference</li>
+</ul>
+<p><strong>What is debunked:</strong></p>
+<ul>
+<li>Language lateralization: Sommer et al. (2004) meta-analysis, d = 0.21, CI includes 0</li>
+<li>Corpus callosum size difference: null after brain-size correction (Bishop &amp; Wahlsten 1997)</li>
+<li>Newborn face preference: 2025 meta-analysis, d = 0.17, non-significant; original study was unblinded</li>
+</ul>
+<p><strong>The publication bias problem:</strong> David et al. (2018) found 88% of fMRI sex-difference studies reported positive findings. Median sample size was n = 32. Neuroimaging sex-difference claims from studies below n = 1,000 should be treated skeptically.</p>
+<p><strong>The brain mosaic:</strong> Joel et al. (2015): only 0–8% of brains are internally consistent across all measures as "male-type" or "female-type." Del Giudice's counter: discriminant analysis can still classify sex at 69–77% accuracy. Both are correct simultaneously — brains are classifiable as a population but mosaic at the individual level.</p>
+<hr />
+<h2 id="part-2-the-power-mechanism--status-explains-more-than-sex">Part 2: The Power Mechanism — Status Explains More Than Sex</h2>
+<h3 id="the-obarr--atkins-discovery-1980">The O'Barr &amp; Atkins Discovery (1980)</h3>
+<p>The foundational study. O'Barr &amp; Atkins observed 30 months of courtroom speech across a broad spectrum of witnesses. <strong>Robin Lakoff's (1975) "women's language" features</strong> — hedges ("sort of," "kind of"), tag questions ("isn't it?"), uptalk, super-polite forms, intensifiers — were real. Lakoff was right about the features. But she was wrong about the cause.</p>
+<p>O'Barr &amp; Atkins found these features correlated with <strong>social power, not gender.</strong> A low-status male ambulance driver used them at high rates. A female doctor used them at low rates. High-status women and low-status men were more similar to each other than to their same-gender counterparts.</p>
+<p>Their conclusion: "Women's language" is <strong>powerless language.</strong> The features mark position in a status hierarchy, not membership in a gender category.</p>
+<p><strong>Subsequent experimental work</strong> (Bradac &amp; Mulac; multiple replications post-2000) confirmed: powerless speech features reliably damage speaker credibility regardless of speaker gender, and the damage operates independently of communicator sex. The status signal in the features is real; the gender signal was an artifact of who typically occupies low-status positions.</p>
+<h3 id="experimental-tests-manipulating-power-independent-of-gender">Experimental Tests: Manipulating Power Independent of Gender</h3>
+<p>Direct experimental evidence confirms that power predicts communication behavior when gender is held constant:</p>
+<ul>
+<li><strong>Kollock, Blumstein &amp; Schwartz (1985):</strong> In mixed-gender couples, high-power partners (regardless of gender) interrupted more and controlled conversation flow. In equal-power couples, no significant gender differences in interruption rates.</li>
+<li><strong>Dovidio et al. (1988):</strong> On "feminine-typed" tasks, women with expertise showed more dominant nonverbal behavior (more eye contact while speaking, less while listening) than men. On gender-neutral tasks, men were more assertive nonverbally. <em>The task domain, not sex, predicted the display.</em></li>
+<li><strong>Karpowitz &amp; Mendelberg (2012):</strong> Under majority-rule decision-making, women spoke significantly less than men. Under unanimous/consensus rules — which institutionally elevated every voice — the participation gap disappeared.</li>
+<li><strong>Kiesling (1997):</strong> Within all-male fraternity groups, communication style varied by hierarchical position. Power predicted style with gender held constant.</li>
+</ul>
+<p><strong>Systematic review (PMC 2024, PMCID: PMC10898859):</strong> The most comprehensive test to date identified 59 experimental power manipulation effects and 102 sex/gender meta-analytic findings. <strong>70.59% (72/102) of sex/gender differences were consistent with power effects; only 7.84% (8/102) were inconsistent — a 9:1 ratio.</strong> For communion-related communication behaviors specifically, the consistency was 80%.</p>
+<h3 id="the-role-based-demand-withdraw-pattern">The Role-Based Demand-Withdraw Pattern</h3>
+<p>The demand-withdraw dynamic — one partner demands change, the other withdraws — is frequently cited as a gendered pattern (wives demand; husbands withdraw). The evidence says otherwise.</p>
+<p><strong>Holley, Sturm &amp; Levenson</strong> studied 63 heterosexual, gay, and lesbian couples:</p>
+<ul>
+<li>Demand-withdraw by couple type: ηp² = .01 (essentially null; sample sizes of 270–9,630 would be needed to reach significance if the null effect were real — confirming genuine similarity)</li>
+<li><strong>Relative desire for change</strong> predicted demand-withdraw role differentiation: R² = 0.41 (p &lt; .01)</li>
+<li>The interaction between couple type and desire-for-change: not significant</li>
+</ul>
+<p><strong>Schrodt et al. (2013)</strong> meta-analysis (74 studies, N=14,255): Effect sizes for wife-demand/husband-withdraw (r ≈ .38) and husband-demand/wife-withdraw (r ≈ .39) are virtually identical. The pattern is role-based.</p>
+<p>The explanation: in heterosexual couples, wives more often want relationship change than husbands — reflecting structural asymmetry (the current arrangement serves them less well). Remove the asymmetry and the pattern follows whoever wants change, regardless of sex.</p>
+<h3 id="the-lgbtq-natural-experiment">The LGBTQ+ Natural Experiment</h3>
+<p>Same-sex couples provide the critical test: hold biological sex constant within each couple and remove the gendered role template. What happens to "gendered" communication patterns?</p>
+<p><strong>Gottman's 12-year study</strong> of same-sex and heterosexual couples:</p>
+<ul>
+<li>Relationship satisfaction: equivalent across all couple types</li>
+<li>Hostile communication tactics: lower in same-sex couples</li>
+<li>Demand-withdraw: identical when desire-for-change is controlled</li>
+<li>Task division: same-sex couples divide by skill, not gender role</li>
+</ul>
+<p><strong>Holley et al.</strong> (above): demand-withdraw collapses to the desire-for-change variable across all three couple types.</p>
+<p><strong>Broader LGBTQ+ literature (Peplau, Diamond, and others):</strong> Lesbian couples often report the highest emotional intimacy; gay male couples show more autonomy negotiation. Neither maps onto heterosexual gender role templates. The variation demonstrates that "gendered" communication patterns are overwhelmingly relational role effects, not sex-inherent effects.</p>
+<p><strong>Implication:</strong> Remove the gender-role template and most "gendered" communication patterns attenuate or disappear. The template, not the sex, is doing most of the work.</p>
+<h3 id="where-power-explanation-has-limits">Where Power Explanation Has Limits</h3>
+<p>Power explains behavioral tendencies. It does not explain why those tendencies persist when power is equalized. Three residual effects survive after power controls and point toward the enforcement layer:</p>
+<ol>
+<li><p><strong>The backlash penalty:</strong> Women who gain status and adopt high-power communication face a competency penalty that men using identical behavior do not face. A 2024 systematic review that otherwise found the 9:1 power-consistency ratio explicitly noted that backlash constitutes a residual gender effect the power model does not absorb.</p></li>
+<li><p><strong>Smiling when unobserved (d = 0.19):</strong> LaFrance et al. (2003) found the smiling gap halves when people don't know they're being watched, but a residual remains. Whether this reflects internalized display rules, affective differences, or residual power effects from habituation is unresolved.</p></li>
+<li><p><strong>LIWC function words (d ≈ 0.21):</strong> Newman et al. (2008) found women use more first-person singular pronouns (I, me, my); men use more articles (a, an, the) and prepositions. These are processed below conscious awareness. The power-control study needed to definitively interpret this finding has not been done.</p></li>
+</ol>
+<hr />
+<h2 id="part-3-persistence-mechanisms--the-enforcement-layer">Part 3: Persistence Mechanisms — The Enforcement Layer</h2>
+<p>Power explains why gendered communication patterns originate. The enforcement layer explains why they persist after power is formally equalized. Three interlocking mechanisms maintain the pattern; a fourth creates a structural trap.</p>
+<h3 id="mechanism-1-evaluative-asymmetry">Mechanism 1: Evaluative Asymmetry</h3>
+<p><strong>Identical communicative acts are decoded differently by speaker gender.</strong></p>
+<p>The clearest empirical demonstration is <strong>Brescoll &amp; Uhlmann (2008)</strong> — "Can an Angry Woman Get Ahead?" (<em>Psychological Science</em>).</p>
+<ul>
+<li>Angry men were conferred <em>higher</em> status than sad men</li>
+<li>Angry women were conferred <em>lower</em> status than angry men — and lower than non-angry women</li>
+<li>The penalty applied to a female CEO as much as a female trainee: high rank provides no immunity</li>
+<li>Both male and female evaluators applied the penalty equally</li>
+</ul>
+<p><strong>The attribution mechanism:</strong> Men's anger was attributed to external circumstances ("the situation is frustrating"). Women's anger was attributed to internal dispositional flaws ("she's out of control," "she's an angry person"). The same emotional display, routed through different causal attributions, produces opposite status outcomes.</p>
+<p><strong>The intervention implication:</strong> Providing an external causal attribution for a woman's anger in Study 3 <strong>eliminated the gender bias entirely.</strong> This is the most directly actionable finding in the wave: the penalty lives in the attribution step, not in the expression itself. Framing the context — "she's responding to a genuine injustice" — disables the mechanism.</p>
+<p>This asymmetry extends beyond anger. Heilman's prescriptive norm framework explains the pattern structurally:</p>
+<ul>
+<li><strong>Descriptive norms</strong> (what women <em>are</em> like) can be countered by evidence of competence</li>
+<li><strong>Prescriptive norms</strong> (what women <em>should</em> be like) cannot — competence is beside the point; the violation is behavioral</li>
+</ul>
+<p>Women who violate prescriptive norms by acting dominant are disliked <em>and</em> less hirable even when evaluators acknowledge they are competent. The objection is not "she can't do the job" but "she shouldn't act that way." This makes prescriptive backlash more resistant to information-based counter-messaging than descriptive stereotyping.</p>
+<h3 id="mechanism-2-anticipatory-self-regulation">Mechanism 2: Anticipatory Self-Regulation</h3>
+<p><strong>Targets learn to expect the asymmetric evaluation and preemptively restrict their behavior.</strong></p>
+<p><strong>Brescoll (2011)</strong> — "Who Takes the Floor and Why" (<em>Administrative Science Quarterly</em>) — demonstrates this directly.</p>
+<p>In archival U.S. Senate data: power predicts how much male senators talk on the Senate floor (r = .54 in 2005; r = .61 in 2007). For female senators, the same relationship is non-significant (r = .28, ns in both years). Same institutional power; different communication output.</p>
+<p>In experimental studies: female CEOs described as talking "much more than others in power" were rated as less competent and less suitable for leadership by both male and female perceivers. Male CEOs who talked more were rated as more competent. Mediation analyses confirmed that <strong>anticipated backlash</strong> explained the gap — women were not irrationally timid; they were accurately forecasting the social cost of exercising their voice.</p>
+<p><strong>The self-fulfilling loop:</strong></p>
+<pre><code>Expected penalty → reduced voice → observers infer lower agency
+→ stereotype appears &quot;natural&quot; → prescriptive norm is reinforced
+</code></pre>
+<p>This loop makes the communication gap look natural even to careful observers — because it is being actively maintained through women's own (rational, strategic) behavior. The rationality of the adaptation does not justify the environment that makes it rational: it is a harm to have one's rational action space constrained by anticipated gender-based penalties.</p>
+<h3 id="mechanism-3-institutional-opacity">Mechanism 3: Institutional Opacity</h3>
+<p><strong>Unequal outcomes persist when they are hidden inside discretionary systems.</strong></p>
+<p>The hiding mechanisms include: informal pay norms and salary secrecy, vague or unstated evaluation criteria, informal sponsorship networks that operate through personal relationships, and discretionary negotiation where anchors are not made visible.</p>
+<p>This mechanism explains why transparency-based interventions work: they expose the hidden channel before bias converts to outcome. Pay transparency, standardized evaluation rubrics, and blind screening all operate by making the decision environment visible before asymmetric evaluation can activate.</p>
+<h3 id="the-carli-paradox-a-structural-trap">The Carli Paradox: A Structural Trap</h3>
+<p><strong>Carli (1990)</strong> identified a finding that all three Wave 3 cross-reviews flagged as insufficiently resolved: women face an audience-segmented strategic trade-off that men do not face.</p>
+<p>In mixed-sex dyads, women who used tentative speech were <em>more</em> influential with men but <em>less</em> influential with women. Women who used assertive speech faced backlash with men but gained credibility with women. Men faced no equivalent trade-off: assertiveness improved their influence with all audiences.</p>
+<p><strong>The implication:</strong> The enforcement system does not merely punish certain behaviors — it manufactures an impossible optimization problem. There is no single communication style that avoids all costs simultaneously across audience types. A woman adapting to improve her influence with male colleagues necessarily disadvantages herself with female colleagues, and vice versa.</p>
+<p>This is a distinct mechanism from the three listed above: not punishment after the fact, not preemptive self-censorship, not hidden outcomes — but a structurally imposed trade-off built into the evaluation environment.</p>
+<hr />
+<h2 id="part-4-what-dismantles-patterns">Part 4: What Dismantles Patterns</h2>
+<h3 id="the-core-principle-fix-the-environment-not-the-person">The Core Principle: Fix the Environment, Not the Person</h3>
+<p>The evidence from across all three waves points to a consistent principle: <strong>interventions that change the evaluation environment consistently outperform interventions that target individual beliefs, attitudes, or behavior.</strong> The enforcement layer analysis explains why — training leaves evaluative asymmetry, self-censorship, and institutional opacity intact. Structural reforms short-circuit at least one of them.</p>
+<p><strong>Recalde &amp; Vesterlund (2023)</strong> mark the field's formal articulation of this shift: from "fix the women" (train women to negotiate more assertively, communicate more dominantly) to "fix the institutions" (change the transparency, structure, and evaluation criteria of the environment).</p>
+<h3 id="high-confidence-structural-interventions">High-Confidence Structural Interventions</h3>
+<p><strong>Pay transparency</strong> <em>Best quasi-experimental evidence in the wave.</em></p>
+<ul>
+<li>UK firms (mandatory gender pay gap reporting): closes ~19% of the gender pay gap, primarily by reducing men's pay growth</li>
+<li>UK universities (2007 initiative): 4.37% gap reduction for female academics</li>
+<li>Canadian public sector analyses (Baker et al.): 20–40% gap reduction in some specifications</li>
+<li><strong>Mechanism:</strong> Makes inequality legible; creates public accountability before bias becomes outcome; eliminates the information asymmetry that allows managers to pay women less without detection</li>
+</ul>
+<p><strong>Structured interviews and evaluation rubrics</strong></p>
+<ul>
+<li>Meta-analysis (Aamodt): unstructured interviews carry a d = 0.59 bias effect; structured interviews reduce this to d = 0.23</li>
+<li>Standardized questions and predefined criteria prevent stereotype-consistent improvisation: evaluators constrained to job-relevant criteria cannot drift to "cultural fit" or "executive presence" assessments that activate gender schemas</li>
+<li>Caveats: gender composition of the occupation still predicts direction of bias (pro-woman in female-dominated roles; pro-man in male-dominated roles); structured interviews reduce person-evaluation bias, not context-level occupational stereotyping</li>
+</ul>
+<p><strong>Blind screening</strong></p>
+<ul>
+<li>Goldin &amp; Rouse (2000), <em>AER</em>: introduction of screens in US symphony orchestra auditions increased likelihood of women advancing in preliminary rounds by 11 percentage points; increased likelihood of final-round selection by ~30%; explained ~30% of the increase in female representation in top US orchestras (from 6% in 1970 to 21% in 1993)</li>
+<li><strong>Methodological caveat:</strong> Subsequent reanalysis (Gelman 2019) raised questions about whether the data variation is sufficient to isolate the screen effect from contemporaneous attitude changes. The directional finding is not disputed; the magnitude estimate may be inflated.</li>
+<li>Mechanism: removes the gender cue before the evaluation schema activates</li>
+</ul>
+<p><strong>Salary history bans</strong></p>
+<ul>
+<li>Directionally positive; less settled than pay transparency evidence</li>
+<li>Recalde &amp; Vesterlund (2023): adverse effects have not materialized; preliminary evidence of smaller negotiation gender gaps</li>
+<li>Best current classification: promising, not yet as empirically secured as transparency</li>
+</ul>
+<h3 id="moderate-evidence-interventions">Moderate-Evidence Interventions</h3>
+<p><strong>Sponsorship programs (vs. mentoring)</strong></p>
+<ul>
+<li>Sponsorship (senior advocate who uses social capital to nominate, protect, and open doors) consistently outperforms mentoring (advice, feedback, psychosocial support) on promotion outcomes</li>
+<li>Formal mentoring with matching → 50% more promotions than informal mentoring</li>
+<li>Psychosocial support alone does <em>not</em> improve career advancement</li>
+<li><strong>Critical caveat:</strong> The causal evidence is observational. No randomized experiment has directly compared sponsorship vs. mentoring on promotion outcomes for women. Classify as "high-confidence mechanism, moderate causal evidence."</li>
+</ul>
+<p><strong>Attribution framing</strong> <em>(underdeployed)</em></p>
+<ul>
+<li>Brescoll (2008) Study 3: providing an external causal attribution for a woman's anger eliminated the gender bias in a single experimental exposure</li>
+<li>The mechanism is targeted: it disables the dispositional-attribution step that produces the penalty without requiring any change to women's communication behavior</li>
+<li><strong>Gap:</strong> Never tested as a structured organizational protocol. This is the highest-leverage underexplored intervention in the literature.</li>
+</ul>
+<p><strong>Meeting process redesign (brainwriting principle)</strong></p>
+<ul>
+<li>Individual written idea generation before verbal discussion reduces floor-time dominance effects</li>
+<li>A 42% increase in original ideas is frequently cited; the primary source for this specific statistic is untraced. The mechanism is sound; the specific figure should not be used in communications without a traceable primary study.</li>
+</ul>
+<h3 id="weak-or-counterproductive-interventions">Weak or Counterproductive Interventions</h3>
+<p><strong>Unconscious bias training (UBT)</strong></p>
+<ul>
+<li>Forscher et al. (2019): 492 studies, 87,418 participants. Short-run changes in implicit bias test scores are possible. Durable behavioral change is not demonstrated. No causal relationship between implicit bias change and behavior change was found.</li>
+<li>Conditions under which UBT may add modest value: longitudinal delivery, skill-building focus (not just awareness), integrated with structural change rather than deployed standalone.</li>
+<li>Risk: "moral licensing" — feeling that bias has been addressed after training can <em>increase</em> subsequent biased behavior.</li>
+</ul>
+<p><strong>"Lean In" / individual-behavior-change framing</strong></p>
+<ul>
+<li>Kim, Fitzsimons &amp; Kay (2018): ~2,000 participants across 6 studies. Reading Lean In-style messages made participants <em>more</em> likely to blame women for gender inequality and <em>less</em> likely to support structural remedies. Confirmed backfire.</li>
+<li>Mechanism: individual-solution framing implies individual responsibility for the problem; if women can fix this themselves, observers infer the system is fair.</li>
+<li>Practical implication: framing gender equity as a problem women solve by changing their communication style is not merely ineffective — it is actively counterproductive.</li>
+</ul>
+<p><strong>Women-only communication coaching as systemic fix</strong></p>
+<ul>
+<li>May improve individual tactical navigation; does not change the attribution system in audiences</li>
+<li>Landing women in the backlash zone is the predictable outcome: coaching women to adopt assertive styles that will be penalized in the environments they return to shifts the adaptation burden onto those being discriminated against</li>
+</ul>
+<h3 id="couples-and-relationship-interventions">Couples and Relationship Interventions</h3>
+<p><strong>Emotionally Focused Therapy (EFT/EFCT)</strong></p>
+<ul>
+<li>Best-evidenced couples intervention in the wave</li>
+<li>RCT-only meta-analysis (Rathgeber et al. 2018): EFCT posttest g = 0.73; 6-month follow-up g = 0.66</li>
+<li><em>Note:</em> Older summaries cite d = 1.3 and "70–90% recovery." These derive from non-randomized study inclusion. The RCT-only figures are methodologically authoritative.</li>
+<li><strong>Active ingredient:</strong> Attachment bond restructuring — de-escalating pursue/withdraw cycles by making primary attachment needs explicit and creating emotionally responsive exchanges. Not primarily a power redistribution intervention.</li>
+</ul>
+<p><strong>Demand-withdraw reframing</strong></p>
+<ul>
+<li>The therapeutic insight from Wave 2: demand-withdraw is driven by relative desire for change, not gender</li>
+<li>Both partners can learn to identify and share the dynamic; the reframe reduces blame and shame around the pattern</li>
+<li>Operationalization: Christensen &amp; Heavey's work; Holley et al. findings directly applicable to clinical practice</li>
+</ul>
+<p><strong>Gottman Method</strong></p>
+<ul>
+<li>Effective in RCTs for couples satisfaction and communication, particularly the softened-start-up and repair-attempt components</li>
+<li>Specific branded prediction claims (90%+ divorce prediction accuracy) are debunked; the therapeutic components are not</li>
+<li>Best current evidence: Gottman-derived assessment concepts are clinically useful; specific GMCT effect size claims require caution</li>
+</ul>
+<hr />
+<h2 id="part-5-unresolved-questions-and-limitations">Part 5: Unresolved Questions and Limitations</h2>
+<h3 id="the-four-major-open-questions">The Four Major Open Questions</h3>
+<p><strong>1. Does the LIWC function-word gap survive explicit power controls?</strong> Newman et al. (2008) found women use ~85,000 more pronouns per year than men (d ≈ 0.21 for function-word differences overall). This is a subcognitive pattern — you don't choose your pronoun distribution the way you choose whether to hedge. If it survives controls for organizational rank, status, and audience power, it becomes the strongest evidence for a non-power-mediated language difference. If it collapses, power explains it. The study has not been done. Until it is, the finding should be reported as a confirmed residual language pattern with interpretation held open — not as a biological signal.</p>
+<p><strong>2. Has the backlash penalty changed across cohorts?</strong> No meta-analysis tracks backlash effect sizes over time. Attitudinal surveys (Gen Z more egalitarian than older cohorts) do not reliably predict behavioral outcomes. The field's honest answer: unknown. Claims that the penalty is shrinking should be treated skeptically until cohort-level behavioral data exist.</p>
+<p><strong>3. Can attribution framing work as an ongoing professional intervention?</strong> Brescoll (2008) Study 3 shows external attribution eliminates the anger bias in a single experimental exposure. Whether this holds in ongoing professional relationships — where dispositional attributions about colleagues have already formed — is entirely untested. The mechanistic logic is compelling; the field application is absent.</p>
+<p><strong>4. Do early childhood interventions change adult communication outcomes?</strong> Chaplin &amp; Aldao (2013) established that gendered emotional expression patterns emerge through socialization (absent in infancy, emerging by middle childhood). But no convincing longitudinal evidence links school-based anti-stereotype interventions to measurable adult communication behavior changes. The transmission chain is established; the intervention chain is not.</p>
+<h3 id="known-methodological-limitations">Known Methodological Limitations</h3>
+<p><strong>WEIRD sampling:</strong> 96% of psychology samples are from Western, Educated, Industrialized, Rich, Democratic populations (Henrich et al. 2010); 68% from the US alone. No comprehensive cross-cultural meta-analysis of gender communication patterns exists. Cross-cultural observations (Japanese aizuchi, Hofstede dimensions, individualism-collectivism as a moderator) are illustrative, not meta-analytically established.</p>
+<p><strong>The gender equality paradox:</strong> Stoet &amp; Geary (2018) and Falk &amp; Hermle (2018) found larger gender differences in more egalitarian countries. Herlitz et al. (2025) confirmed this for most domains but found reversals for math and sexual behavior. Berggren et al. (2025, <em>PNAS</em>) argues the entire pattern is a Simpson's paradox artifact of cultural clustering. Unresolved — and critically, untested for communication behavior specifically.</p>
+<p><strong>Publication bias:</strong> The same 88% positive-finding rate in fMRI sex-difference research (David et al. 2018) plausibly affects the gender communication literature broadly. Null results — studies that found no gender difference in a given communication domain — are underrepresented in the published literature, meaning effect size estimates are likely inflated throughout.</p>
+<p><strong>Intersectionality gap:</strong> Most meta-analyses treat "women" as a uniform category. The race × backlash literature shows this is inadequate. Livingston et al. (2012) found agentic Black women face less female-role-incongruity backlash than agentic White women in some leadership contexts — because racial stereotypes already code Black women as more dominant, making assertiveness less role-incongruent. But Black women face the racialized "Angry Black Woman" trope as a distinct enforcement mechanism. Marshburn et al. (2020, N=630) found the anger penalty robust across racialized conditions. These findings coexist: the content and mechanism of backlash are racialized even if its aggregate magnitude is not simply additive. A meta-analysis of intersectional penalties in communication contexts does not exist.</p>
+<p><strong>The brainwriting figure:</strong> The 42% increase in original ideas frequently cited for brainwriting vs. brainstorming cannot be traced to a primary study. The mechanism is sound and consistent with what the research shows about floor-time dominance. The specific statistic should not be treated as a high-confidence anchor.</p>
+<p><strong>Dose-response of backlash:</strong> The field lacks a clean assertiveness-gradient study. Current evidence supports a threshold characterization (penalty kicks in above a perceived dominance level), but the curve itself is not mapped.</p>
+<h3 id="what-the-field-has-established-vs-what-it-hasnt">What the Field Has Established vs. What It Hasn't</h3>
+<p><strong>Established with high confidence:</strong></p>
+<ul>
+<li>Gender similarities dominate (d ≤ 0.35 for 78% of effects; Hyde 2005)</li>
+<li>Power/status explains ~70% of sex/gender communication differences (9:1 ratio; PMC 2024 review)</li>
+<li>Demand-withdraw is role-based, not sex-based (R² = 0.41 for desire-for-change; Holley et al.)</li>
+<li>Anger triggers disproportionate status loss for women vs. men (Brescoll &amp; Uhlmann 2008)</li>
+<li>Self-censorship under anticipated backlash is real and measurable (Brescoll 2011)</li>
+<li>Structural interventions outperform training interventions (multiple meta-analyses and natural experiments)</li>
+<li>Unconscious bias training does not produce durable behavioral change (Forscher et al. 2019: 492 studies)</li>
+<li>LGBTQ+ couples show that most "gendered" patterns are relational role effects (Gottman; Holley et al.)</li>
+</ul>
+<p><strong>Established with moderate confidence:</strong></p>
+<ul>
+<li>The LIWC function-word residual is a real subcognitive language pattern (interpretation contested)</li>
+<li>Prescriptive norm violation triggers more resistant backlash than descriptive stereotyping (Heilman)</li>
+<li>Intersectional race × gender modulation of backlash (direction varies; mechanism complex)</li>
+<li>EFT is the strongest couples intervention (Rathgeber et al. 2018: g = 0.73 RCT-only)</li>
+</ul>
+<p><strong>Not yet established:</strong></p>
+<ul>
+<li>Whether function-word gaps survive explicit power controls</li>
+<li>Whether backlash penalties are decreasing across cohorts</li>
+<li>Whether attribution framing works outside single-exposure experiments</li>
+<li>Whether early childhood interventions produce adult communication outcomes</li>
+<li>Complete cross-cultural picture for any of the above</li>
+</ul>
+<hr />
+<h2 id="appendix-key-researchers-and-their-standing">Appendix: Key Researchers and Their Standing</h2>
+<table>
+<thead>
+<tr class="header">
+<th>Researcher</th>
+<th>Framework</th>
+<th>Evidence Quality</th>
+<th>Current Status</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Janet Hyde</td>
+<td>Gender Similarities Hypothesis</td>
+<td>Meta-meta-analytic (gold)</td>
+<td>Empirical baseline for the field</td>
+</tr>
+<tr class="even">
+<td>Alice Eagly / Wendy Wood</td>
+<td>Social Role → Biosocial Constructionism</td>
+<td>Meta-analytic (strong)</td>
+<td>Mainstream consensus position</td>
+</tr>
+<tr class="odd">
+<td>Victoria Brescoll</td>
+<td>Backlash and volubility</td>
+<td>Experimental (strong)</td>
+<td>Clearest enforcement layer evidence</td>
+</tr>
+<tr class="even">
+<td>Madeline Heilman</td>
+<td>Prescriptive norms</td>
+<td>Experimental (strong)</td>
+<td>Standard backlash framework</td>
+</tr>
+<tr class="odd">
+<td>Laurie Rudman</td>
+<td>Status incongruity / backlash</td>
+<td>Experimental (strong)</td>
+<td>Complements Heilman</td>
+</tr>
+<tr class="even">
+<td>Christensen &amp; Heavey</td>
+<td>Demand-Withdraw (role-based)</td>
+<td>Meta-analytic (strong)</td>
+<td>Consensus: role, not gender</td>
+</tr>
+<tr class="odd">
+<td>Linda Carli</td>
+<td>Gendered influence paradox</td>
+<td>Experimental (moderate)</td>
+<td>Audience-conditioned trade-off</td>
+</tr>
+<tr class="even">
+<td>James Pennebaker</td>
+<td>LIWC / function words</td>
+<td>Computational (strong)</td>
+<td>Newman et al. residual finding</td>
+</tr>
+<tr class="odd">
+<td>Robin Lakoff</td>
+<td>"Women's Language" features</td>
+<td>Foundational (reframed)</td>
+<td>Features real; cause reframed</td>
+</tr>
+<tr class="even">
+<td>Penny Eckert</td>
+<td>Communities of practice; linguistic innovation</td>
+<td>Ethnographic (strong)</td>
+<td>Dominant paradigm, language &amp; gender</td>
+</tr>
+<tr class="odd">
+<td>Deborah Cameron</td>
+<td>Myth of Mars and Venus</td>
+<td>Critical synthesis (strong)</td>
+<td>Mainstream critique of pop psychology</td>
+</tr>
+<tr class="even">
+<td>Cordelia Fine</td>
+<td>Neurosexism critique</td>
+<td>Methodological (strong)</td>
+<td>Improved field methodology</td>
+</tr>
+<tr class="odd">
+<td>John Gottman</td>
+<td>Four Horsemen; couples therapy</td>
+<td>Descriptive (strong) / Predictive (debunked)</td>
+<td>Therapy components work; prediction claims do not</td>
+</tr>
+<tr class="even">
+<td>Sue Johnson</td>
+<td>EFT / attachment theory</td>
+<td>RCT-supported (strong)</td>
+<td>Best-evidenced couples intervention</td>
+</tr>
+<tr class="odd">
+<td>Deborah Tannen</td>
+<td>Rapport vs. Report Talk</td>
+<td>Pop-synthesis (weak)</td>
+<td>Framework rejected by field</td>
+</tr>
+<tr class="even">
+<td>John Gray</td>
+<td>Mars/Venus</td>
+<td>None</td>
+<td>Empirically discredited</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="summary-of-practical-recommendations">Summary of Practical Recommendations</h2>
+<h3 id="for-organizations">For Organizations</h3>
+<table>
+<thead>
+<tr class="header">
+<th>Intervention</th>
+<th>Evidence Level</th>
+<th>Mechanism</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Pay transparency</td>
+<td>Strong</td>
+<td>Exposes hidden inequality before outcome</td>
+</tr>
+<tr class="even">
+<td>Structured interviews with rubrics</td>
+<td>Strong</td>
+<td>Prevents schema drift in evaluation</td>
+</tr>
+<tr class="odd">
+<td>Blind screening where feasible</td>
+<td>Strong (direction) / Moderate (magnitude)</td>
+<td>Removes gender cue before evaluation</td>
+</tr>
+<tr class="even">
+<td>Sponsorship programs (not mentoring)</td>
+<td>Moderate</td>
+<td>Structural access, not advisory</td>
+</tr>
+<tr class="odd">
+<td>Attribution framing norms</td>
+<td>Experimental only — test as field intervention</td>
+<td>Disables dispositional attribution step</td>
+</tr>
+<tr class="even">
+<td>UBT (standalone)</td>
+<td>Weak — no durable behavior change</td>
+<td>Does not reach enforcement mechanism</td>
+</tr>
+<tr class="odd">
+<td>Lean In framing</td>
+<td>Counterproductive — confirmed backfire</td>
+<td>Shifts blame onto targets</td>
+</tr>
+</tbody>
+</table>
+<h3 id="for-clinicians-couples">For Clinicians (Couples)</h3>
+<ul>
+<li>EFT/EFCT: best-evidenced model (g = 0.73, Rathgeber 2018)</li>
+<li>Demand-withdraw reframe: driven by desire-for-change, not gender; directly therapeutic</li>
+<li>Gottman Method: useful for assessment; specific prediction claims should not be cited clinically</li>
+</ul>
+<h3 id="for-researchers">For Researchers</h3>
+<ul>
+<li>Priority 1: Power-controlled LIWC replication — resolves the subcognitive vs. social interpretation</li>
+<li>Priority 2: Attribution framing field experiment — highest ROI gap between lab and application</li>
+<li>Priority 3: Cohort-level backlash meta-analysis — the most important unanswered question in the enforcement literature</li>
+<li>Priority 4: Sponsorship RCT — mechanism is established; causal identification is weak</li>
+</ul>
+
+    </article>
+
+    <footer>
+      <a href="./">Male–Female Communication Patterns</a> &nbsp;·&nbsp;
+      <a href="/">marcuspl.github.io</a>
+    </footer>
+
+  </div>
+</body>
+</html>
