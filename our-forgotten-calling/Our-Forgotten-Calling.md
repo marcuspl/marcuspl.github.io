@@ -9,6 +9,8 @@ date: "March 2026"
 
 # Foreword
 
+*Dedicated to Kevin*
+
 It is the calling of all of us to live in peace with ourselves. Peace is accomplished through inner order. The "wise men" of this world are rich because they have achieved mastery in their own domains, but they are called *wise* because when they see the new thing—coming from "above," lying in a "manger"—they instantly yield. They are rewarded for their effort and obedience by getting to gaze upon the Christ child. If they had tried to elevate their own children (their worldly talents), the tyrant would have killed them, and we would have remained barren.
 
 Now you know that your calling is to remember yourself. And remember this teaching. And remember your generation, and tell them.
