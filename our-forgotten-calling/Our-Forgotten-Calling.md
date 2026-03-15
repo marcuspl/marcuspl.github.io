@@ -7,6 +7,15 @@ date: "March 2026"
 
 > **Note:** This is a DRAFT manuscript synthesized via multi-agent AI collaboration.
 
+# Foreword
+
+It is the calling of all of us to live in peace with ourselves. Peace is accomplished through inner order. The "wise men" of this world are rich because they have achieved mastery in their own domains, but they are called *wise* because when they see the new thing—coming from "above," lying in a "manger"—they instantly yield. They are rewarded for their effort and obedience by getting to gaze upon the Christ child. If they had tried to elevate their own children (their worldly talents), the tyrant would have killed them, and we would have remained barren.
+
+Now you know that your calling is to remember yourself. And remember this teaching. And remember your generation, and tell them.
+
+***
+
+
 # Chapter 1: The Ruined Temple (The Problem of Multiplicity)
 
 It is 10:45 AM on a Sunday morning. The bridge of the final worship song is building, the haze from the machine catches the stage lights just right, and for a fleeting moment, you feel it—a profound sense of peace. A feeling of being "whole." You are a child of God, redeemed and purposeful. You sing about surrendering all, and in that moment, you mean it with every fiber of your being.
@@ -531,6 +540,7 @@ Inner order is simply the expansion of our spiritual capacity. We do not discipl
 ### Biblical Foundation
 *   **Philippians 2:12-13:** *"Work out your own salvation with fear and trembling; for it is God who works in you both to will and to do for His good pleasure."* Paul describes a perfect synergy: our "working out" is fueled by His "working in."
 *   **1 Corinthians 9:24-27:** Paul speaks of the athlete who goes into "strict training." This training is not to win God's love, but to be "not disqualified" from the race—to maintain the *capacity* to keep running.
+*   **Luke 21:19:** *"In your patience possess ye your souls" (KJV).* To understand this deeply, we must look at the original Greek. Christ says, "By your *hypomonē* (patient endurance) you shall *ktáomai* (acquire, gain possession of) your *psychas* (souls)." This perfectly addresses the "works vs. grace" debate. You do not *earn* salvation, but you must actively do the inner work to *gain possession* of your own fragmented soul through steadfast endurance. If your soul is divided into a "Legion" of parts, you do not fully possess it. And you cannot surrender to God a house that you do not possess. The "effort" is the act of gathering your scattered pieces so that Grace can inhabit the whole.
 
 ---
 
