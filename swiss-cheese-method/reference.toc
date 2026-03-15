@@ -1,0 +1,64 @@
+\contentsline {section}{\numberline {1}A. Core Framing and Value Proposition}{4}{section.1}%
+\contentsline {subsection}{\numberline {1.1}A1. ``Tactical safety net'' vs.\ ``force multiplier''}{4}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}A2. ``Strongest where you need it least''}{4}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}A3. Baseline mismatch: ``B+/A-'' vs ``Excellent''}{5}{subsection.1.3}%
+\contentsline {subsection}{\numberline {1.4}A4. Value category bias (small facts vs big picture)}{5}{subsection.1.4}%
+\contentsline {section}{\numberline {2}B. Theoretical Framework and Metaphors}{5}{section.2}%
+\contentsline {subsection}{\numberline {2.1}B1. Map-territory framework vs alternatives}{5}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}B2. RLHF analogy: boundary overlay vs terrain reshaping}{6}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}B3. Dual engine vs triple engine}{6}{subsection.2.3}%
+\contentsline {section}{\numberline {3}C. Correlation, Convergence, and Independence}{7}{section.3}%
+\contentsline {subsection}{\numberline {3.1}C1. Independence of model errors}{7}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}C2. Convergence trajectory}{7}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}C3. Insight generation vs error prevention degradation}{7}{subsection.3.3}%
+\contentsline {section}{\numberline {4}D. Hallucinations and Factual Reliability}{8}{section.4}%
+\contentsline {subsection}{\numberline {4.1}D1. Stochastic vs systematic hallucinations (core question)}{8}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}D2. Confabulated citations: stochastic or systematic?}{8}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}D3. Qualifier erosion as systematic hallucination}{8}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}D4. Sycophantic hallucination}{9}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}D5. Empirical validation gap}{9}{subsection.4.5}%
+\contentsline {section}{\numberline {5}E. Editor Role, Authority, and Bias}{9}{section.5}%
+\contentsline {subsection}{\numberline {5.1}E1. Editor indispensability}{9}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}E2. Editor-induced convergence}{10}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}E3. Editor bias / Ikea effect}{10}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}E4. Editor-as-coordinator conflict}{10}{subsection.5.4}%
+\contentsline {section}{\numberline {6}F. Cross-Review Dynamics and Pipeline Behavior}{11}{section.6}%
+\contentsline {subsection}{\numberline {6.1}F1. Review order asymmetry}{11}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}F2. Polite agreement and deference}{11}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}F3. Cross-review scope limitations}{12}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.4}F4. Pipeline omissions and integrity failures}{12}{subsection.6.4}%
+\contentsline {subsection}{\numberline {6.5}F5. Evidence access asymmetry}{12}{subsection.6.5}%
+\contentsline {section}{\numberline {7}G. Failure Modes and Error Taxonomies}{12}{section.7}%
+\contentsline {subsection}{\numberline {7.1}G1. Convergence on shared priors (highest severity)}{12}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}G2. Failure taxonomy correction (G6 viewbox)}{13}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}G3. Content drift / qualifier erosion}{13}{subsection.7.3}%
+\contentsline {subsection}{\numberline {7.4}G4. Instruction ambiguity}{13}{subsection.7.4}%
+\contentsline {subsection}{\numberline {7.5}G5. No retrospective mechanism}{14}{subsection.7.5}%
+\contentsline {section}{\numberline {8}H. Output-Quality Disputes (By Project)}{14}{section.8}%
+\contentsline {subsection}{\numberline {8.1}H1. Enterprise Healthcare --- ADT-to-EMR overclaim}{14}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}H2. Enterprise Healthcare --- Exfiltration probability math}{14}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}H3. Enterprise Healthcare --- AD bypass simplification}{15}{subsection.8.3}%
+\contentsline {subsection}{\numberline {8.4}H4. Healthcare strategy gaps}{15}{subsection.8.4}%
+\contentsline {subsection}{\numberline {8.5}H5. The-gap --- Translation table completeness}{15}{subsection.8.5}%
+\contentsline {subsection}{\numberline {8.6}H6. The-gap --- Protestant column compression}{16}{subsection.8.6}%
+\contentsline {subsection}{\numberline {8.7}H7. The-gap --- Orthodox ``Church'' entry endorsement risk}{16}{subsection.8.7}%
+\contentsline {subsection}{\numberline {8.8}H8. The-gap --- Pentecostal register asymmetry}{16}{subsection.8.8}%
+\contentsline {subsection}{\numberline {8.9}H9. The-gap --- Directional relief bias}{17}{subsection.8.9}%
+\contentsline {subsection}{\numberline {8.10}H10. The-gap --- Ecumenical consensus baseline}{17}{subsection.8.10}%
+\contentsline {subsection}{\numberline {8.11}H11. The-gap --- Relief-framing stability problem}{17}{subsection.8.11}%
+\contentsline {section}{\numberline {9}I. Methodology Design Disputes}{18}{section.9}%
+\contentsline {subsection}{\numberline {9.1}I1. Blind Stage 1 vs Pre-mortem requirement}{18}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9.2}I2. Model diversity vs prompt diversity}{18}{subsection.9.2}%
+\contentsline {subsection}{\numberline {9.3}I3. Optimal model count}{19}{subsection.9.3}%
+\contentsline {subsection}{\numberline {9.4}I4. Minimum cross-review}{19}{subsection.9.4}%
+\contentsline {section}{\numberline {10}J. Meta-Convergence and Self-Assessment Risks}{19}{section.10}%
+\contentsline {subsection}{\numberline {10.1}J1. Meta-convergence on pessimism}{19}{subsection.10.1}%
+\contentsline {subsection}{\numberline {10.2}J2. ``Method solves problems it creates''}{20}{subsection.10.2}%
+\contentsline {section}{\numberline {11}K. Editor vs Models Tension (Wave 5 Explicit)}{20}{section.11}%
+\contentsline {subsection}{\numberline {11.1}K1. Models' caution vs editor's enthusiasm}{20}{subsection.11.1}%
+\contentsline {subsection}{\numberline {11.2}K2. Negativity audit (systematic pessimism)}{20}{subsection.11.2}%
+\contentsline {section}{\numberline {12}L. Open Questions (Unresolved Ledger)}{21}{section.12}%
+\contentsline {section}{\numberline {13}M. Method-Level Criticisms (Retained)}{21}{section.13}%
+\contentsline {section}{\numberline {14}N. Evidence Disagreements That Remain}{21}{section.14}%
+\contentsline {subsection}{\numberline {14.1}N1. Specifics of hallucination correlation}{21}{subsection.14.1}%
+\contentsline {subsection}{\numberline {14.2}N2. ``80--90\% of specialist quality'' claim}{21}{subsection.14.2}%
