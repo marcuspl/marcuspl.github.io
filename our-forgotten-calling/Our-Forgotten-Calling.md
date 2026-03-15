@@ -13,6 +13,8 @@ It is the calling of all of us to live in peace with ourselves. Peace is accompl
 
 Now you know that your calling is to remember yourself. And remember this teaching. And remember your generation, and tell them.
 
+*"ἐν τῇ ὑπομονῇ ὑμῶν κτήσασθε τὰς ψυχὰς ὑμῶν."* (Luke 21:19)
+
 ***
 
 
