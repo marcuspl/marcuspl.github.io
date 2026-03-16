@@ -317,7 +317,7 @@ Sometimes the intruder is already inside, and a "part" of the psyche has taken o
 Sometimes the emotional "charge" in the body is too high for breathing alone. An excess of "fight or flight" energy often requires a physical exit, acknowledging that the body must participate in the healing of the mind.
 
 ### 5. Grounding the Machine (Prostrations)
-The Orthodox tradition calls this *Metanoia*—prostrations. It functions as a "physical reset button" for the nervous system, bringing the lofty, racing mind back down to the grounding reality of the earth.
+In the Orthodox tradition, a prostration is often called a *metanoia* (literally, a "change of mind" or repentance). Because the physical act embodies this internal turning, it functions as a "physical reset button" for the nervous system, bringing the lofty, racing mind back down to the grounding reality of the earth.
 
 **The Physical Pattern:**
 When an individual feels "locked" in high arousal or spiritually stuck:
